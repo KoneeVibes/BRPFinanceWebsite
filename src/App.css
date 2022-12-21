@@ -7,6 +7,8 @@ html {
     height: 100%;
     --page-padding: 0 6.25em;
     --sectioning-gap: 3.65625em 0;
+    --flex-gap: 3em;
+    --card-padding: 2em;
 }
 
 * {

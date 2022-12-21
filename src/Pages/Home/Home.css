@@ -1,4 +1,10 @@
-#Home .Header-LF h1, #Home .Header-LF h2{
+/* #Home {
+    --flex-gap: 3em;
+    --card-padding: 2em;
+} */
+
+#Home .Header-LF h1,
+#Home .Header-LF h2 {
     font-family: 'Montserrat';
     font-size: 55px;
     font-weight: 700;
@@ -8,7 +14,7 @@
     margin: 0;
 }
 
-#Home .Header-LF #Body{
+#Home .Header-LF #Body {
     font-family: 'Montserrat';
     font-size: 22px;
     font-weight: 500;
@@ -16,3 +22,173 @@
     letter-spacing: 0em;
     color: #FFFFFF;
 }
+
+#Home .Hero-Tab {
+    margin: var(--sectioning-gap);
+    padding: var(--page-padding);
+}
+
+#Home .Hero-Tab .Text-Card h6 {
+    font-family: 'Montserrat';
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 43px;
+    letter-spacing: 0em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+
+#Home .Hero-Tab .Body-Text {
+    font-family: 'Montserrat';
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0em;
+}
+
+#Home .Contact-Us {
+    margin: var(--page-padding);
+    background: #F6F6F6;
+    border: 1px solid #DBE4E9;
+    border-radius: 20px;
+}
+
+#Home .Contact-Us #Image-Text-Box {
+    padding: 0;
+}
+
+#Home .Contact-Us .Text-Card {
+    padding: 3em;
+}
+
+#Home .Contact-Us .Text-Card h6 {
+    font-family: 'Montserrat';
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 63px;
+    letter-spacing: 0em;
+}
+
+#Home .Contact-Us .Body-Text {
+    font-family: 'Montserrat';
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 38px;
+    letter-spacing: 0em;
+    color: #757575;
+}
+
+#Home .Contact-Us button {
+    padding-top: 10em;
+}
+
+#Home .Getting-Started,
+#Home .Info-Container {
+    margin: var(--page-padding);
+    padding: var(--sectioning-gap);
+}
+
+#Home .Getting-Started .Text-Cards {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--flex-gap);
+}
+
+#Home .Getting-Started h4 {
+    font-family: 'Montserrat';
+    font-size: 55px;
+    font-weight: 500;
+    line-height: 75px;
+    letter-spacing: 0em;
+}
+
+#Home .Getting-Started .Text-Card h6 {
+    font-family: 'Montserrat';
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 34px;
+    letter-spacing: -0.03em;
+    text-align: center;
+}
+
+#Home .Getting-Started .Text-Card .Body-Text {
+    font-family: 'Manrope';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: -0.02em;
+    text-align: center;
+}
+
+#Home .Getting-Started .Text-Card {
+    text-align: center;
+    padding: var(--card-padding);
+    height: 28.0625em;
+}
+
+#Home .Getting-Started .Text-Card button {
+    margin: auto;
+}
+
+#Home .Getting-Started .Text-Card button p {
+    color: #000000;
+}
+
+#Home .Info-Container .Text-Cards {
+    display: flex;
+    align-items: center;
+    gap: var(--flex-gap);
+}
+
+#Home .Info-Container .Text-Card {
+    padding: var(--card-padding);
+    height: 44.875em;
+}
+
+#Home .Info-Container .Text-Card h6 {
+    font-family: 'Montserrat';
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 42px;
+    letter-spacing: -0.03em;
+}
+
+#Home .Info-Container .Text-Card p {
+    font-family: 'Montserrat';
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 37px;
+    letter-spacing: 0em;
+}
+
+#Home .Info-Container h3 {
+    font-family: 'Montserrat';
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 75px;
+    letter-spacing: 0em;
+    text-align: center;
+    width: 60%;
+    margin: auto;
+    margin-block-end: var(--card-padding);
+}
+
+#Home .Mail-Box-Container{
+    margin: var(--sectioning-gap);   
+}
+
+/* @media screen and (max-width: 1727px) {
+    #Home .Hero-Tab .Text-Card h6 {
+        font-size: 25px;
+        line-height: 30px;
+        margin-block-start: 0.5em;
+        margin-block-end: 1em;
+    }
+
+    #Home .Hero-Tab .Body-Text {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0em;
+    }
+} */
