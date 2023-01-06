@@ -13,19 +13,19 @@ const CalendlyWrapper = styled.section`
     margin: var(--sectioning-gap);
 
     .Text-Flank h3{
-        // font-family: 'Montserrat';
-        // font-size: 50px;
-        // font-weight: 600;
-        // line-height: 40px;
-        // letter-spacing: -0.02em;
+        font-family: Montserrat;
+        font-size: 50px;
+        font-weight: 600;
+        line-height: 40px;
+        letter-spacing: -0.02em;
     }
 
     .Text-Flank p{
-        // font-family: 'Manrope';
-        // font-size: 18px;
-        // font-weight: 400;
-        // line-height: 31px;
-        // letter-spacing: 0em;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 31px;
+        letter-spacing: 0em;
     }
 
     .Text-Flank{
