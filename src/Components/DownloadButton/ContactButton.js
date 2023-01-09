@@ -18,9 +18,9 @@ const ContactButtonWrapper = styled.button`
     }
 `
 
-const ContactButton = ({ButtonText, Background, Type, Width, Display}) => {
+const ContactButton = ({ButtonText, Background, Type, Width, Display, BorderRadius, BoxShadow, Padding}) => {
   return (
-    <ContactButtonWrapper type={Type} style={{background: Background, width: Width}}>
+    <ContactButtonWrapper type={Type} style={{background: Background, width: Width, borderRadius: BorderRadius, boxShadow: BoxShadow, padding: Padding}}>
         <p id='Button-Text'>{ButtonText}</p>
         <img src={ArrowRight} alt='Arrow Right Icon' style={{display: Display}}></img>
     </ContactButtonWrapper>

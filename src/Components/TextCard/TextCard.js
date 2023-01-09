@@ -5,13 +5,20 @@ const TextCardWrapper = styled.div`
 
 `
 
-const TextCard = ({Icon, HeadText, Body, Button, DisplayIcon, Display, Background, Border, BorderRadius, BoxShadow}) => {
+const TextCard = ({ Icon, HeadText, Body, Button, DisplayIcon, Display, Background, Border, BorderRadius, BoxShadow, Gap, FlexDirection, Utility }) => {
     return (
-        <TextCardWrapper className='Text-Card' style={{display: Display, background: Background, border: Border, borderRadius: BorderRadius, boxShadow: BoxShadow}}>
-            <img src={Icon} alt='relevant icon' style={{display: DisplayIcon}}></img>
-            <h6>{HeadText}</h6>
-            <p className='Body-Text'>{Body}</p>
-            <div>{Button}</div>
+        <TextCardWrapper className='Text-Card' style={{ display: Display, flexDirection: FlexDirection, gap: Gap, background: Background, border: Border, borderRadius: BorderRadius, boxShadow: BoxShadow }}>
+            <div className='Icon-Container'>
+                <img src={Icon} alt='relevant icon' style={{ display: DisplayIcon }}></img>
+            </div>
+            <div className='Text-Container'>
+                <h6>{HeadText}</h6>
+                <p className='Body-Text'>{Body}</p>
+                <div>{Button}</div>
+            </div>
+            <div className='Utility'>
+                {Utility}
+            </div>
         </TextCardWrapper>
     )
 }

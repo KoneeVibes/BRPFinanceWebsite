@@ -25,7 +25,6 @@
 
 #Home .Hero-Tab {
     margin: var(--sectioning-gap);
-    padding: var(--page-padding);
 }
 
 #Home .Hero-Tab .Text-Card h6 {

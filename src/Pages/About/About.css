@@ -1,0 +1,132 @@
+#About .Header-LF h2 {
+    font-family: 'Montserrat';
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 87px;
+    letter-spacing: 0em;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+#About .Header-LF h1 {
+    font-family: 'Montserrat';
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 87px;
+    letter-spacing: 0em;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+#About .Header-LF #Body {
+    font-family: 'Montserrat';
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0em;
+    color: #FFFFFF;
+}
+
+#About .Animated-Hero {
+    margin: var(--page-padding);
+}
+
+#About .Hero-Tab {
+    margin: var(--sectioning-gap);
+}
+
+#About .Hero-Tab #Image-Text-Box {
+    background: #F6F6F6;
+    border-radius: 38px;
+}
+
+#About .Hero-Tab #Image-Text-Box .Flex-Box {
+    padding: var(--page-padding);
+    align-items: center;
+}
+
+#About .Hero-Tab #Image-Text-Box .Flex-Box .Text-Card-Box {
+    gap: 0;
+}
+
+#About .Hero-Tab #Image-Text-Box .Flex-Box .Text-Card-Box h6 {
+    font-family: 'Montserrat';
+    font-size: 55px;
+    font-weight: 600;
+    line-height: 63px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 0;
+}
+
+#About .Hero-Tab #Image-Text-Box .Flex-Box .Text-Card-Box .Body-Text {
+    font-family: 'Montserrat';
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 33px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+#About .Profile-Section {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: var(--flex-gap);
+    padding: var(--sectioning-gap);
+    margin: var(--page-padding);
+}
+
+#About .Profile-Section .Text-Card {
+    flex: 1;
+}
+
+#About .Profile-Section .Text-Card .Icon-Container img {
+    width: 100%;
+}
+
+#About .Profile-Section .Text-Card h6 {
+    font-family: 'Montserrat';
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 47px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 0;
+}
+
+#About .Profile-Section .Text-Card .Body-Text {
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 33px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+#About .Testimony-Section .Text-Card h6 {
+    font-family: 'Montserrat';
+    font-size: 65px;
+    font-weight: 600;
+    line-height: 79px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 0;
+}
+
+#About .Testimony-Section .Text-Card .Body-Text {
+    font-family: 'Montserrat';
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 37px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+#About .Testimony-Section .Text-Card .Utility{
+    margin-top: var(--flex-gap);
+}
+
+#About .Calendly-Box{
+    margin: var(--sectioning-gap);
+}
