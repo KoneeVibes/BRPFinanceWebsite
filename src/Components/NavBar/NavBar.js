@@ -45,7 +45,7 @@ const NavBar = () => {
             <ul>
                 <Link to={'/'}><li>Home</li></Link>
                 <Link to={'/about'}><li>About</li></Link>
-                <Link><li>Home Loan</li></Link>
+                <Link to={'/homeloan'}><li>Home Loan</li></Link>
                 <Link><li>Tips & Guide</li></Link>
                 <Link><li>News</li></Link>
                 <Link><li>Contact</li></Link>
