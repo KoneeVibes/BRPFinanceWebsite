@@ -13,15 +13,19 @@ const HeaderWrapper = styled.section`
     justify-content: center;
 `
 
-const Header = ({ background, height, widthLF, widthRF, HeaderTextI, HeaderTextII, Body, gap, BtnTxt, DisplayBtn }) => {
+const Header = ({ background, height, widthLF, widthRF, HeaderTextI, HeaderTextII, Body, gap, BtnTxt, DisplayBtn, DisplayReview }) => {
     return (
-        <HeaderWrapper style={{ backgroundImage: background, height: height, gap: gap }}>
+        <HeaderWrapper className='Header' style={{ backgroundImage: background, height: height, gap: gap }}>
             <div className='Header-LF' style={{ flex: widthLF }}>
                 <h1>{HeaderTextI}</h1>
                 <h2>{HeaderTextII}</h2>
                 <p id='Body'>{Body}</p>
-                <DownloadButton ButtonText={BtnTxt} style={{display: DisplayBtn}}/>
-                <StarReview />
+                <div className='Btn-Container' style={{ display: DisplayBtn }}>
+                    <DownloadButton ButtonText={BtnTxt} />
+                </div>
+                <div className='Review-Container' style={{ display: DisplayReview }}>
+                    <StarReview />
+                </div>
             </div>
             <div className='Header-RF' style={{ flex: widthRF }}>
 

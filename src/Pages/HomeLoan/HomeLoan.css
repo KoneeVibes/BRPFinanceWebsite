@@ -1,0 +1,25 @@
+#HomeLoan .Header-LF h1 {
+    font-family: 'Montserrat';
+    font-size: 62px;
+    font-weight: 700;
+    line-height: 84px;
+    letter-spacing: 0em;
+    color: #FFFFFF;
+}
+
+#HomeLoan .Header-LF #Body {
+    font-family: 'Montserrat';
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 37px;
+    letter-spacing: 0em;
+    color: #FFFFFF;
+}
+
+#HomeLoan .Header{
+    align-items: stretch;
+}
+
+#HomeLoan .Hero-Tab{
+    margin: var(--sectioning-gap);
+}

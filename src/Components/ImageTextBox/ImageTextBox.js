@@ -20,6 +20,13 @@ const ImageTextBoxWrapper = styled.section`
     .Image-Box img{
         width: 100%;
     }
+
+    .Utility-Box{
+        diplay: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--flex-gap);
+    }
 `
 
 const ImageTextBox = ({ src, IconI, IconII, UtilityI, UtilityII, HeadTextI, HeadTextII, BodyI, BodyII, Button, widthIB, widthTCB, gap, flexDirection, DisplayI, DisplayII, DisplayCardI, DisplayCardII, alignItems, UtilityIII, UtilityIV }) => {
@@ -45,7 +52,7 @@ const ImageTextBox = ({ src, IconI, IconII, UtilityI, UtilityII, HeadTextI, Head
                         Utility = {UtilityII} />
                 </div>
             </div>
-            <div>
+            <div className='Utility-Box'>
                 {UtilityIII}
                 {UtilityIV}
             </div>
