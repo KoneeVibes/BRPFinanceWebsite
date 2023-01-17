@@ -29,6 +29,12 @@ const ImageTextBoxWrapper = styled.section`
         justify-content: space-between;
         gap: calc(2 * var(--flex-gap));
     }
+
+    @media screen and (min-width: 1440px) and (max-width: 1536px){
+        .Text-Card-Box{
+            gap: 4em;
+        }
+    }
 `
 
 const ImageTextBox = ({ src, IconI, IconII, UtilityI, UtilityII, HeadTextI, HeadTextII, BodyI, BodyII, Button, widthIB, widthTCB, gap, flexDirection, DisplayI, DisplayII, DisplayCardI, DisplayCardII, alignItems, UtilityIII, UtilityIV, IntroI, IntroII, One, Two, Three, Four }) => {

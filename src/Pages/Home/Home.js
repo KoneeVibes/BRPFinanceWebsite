@@ -37,20 +37,20 @@ const Home = () => {
                 <ImageTextBox src={HeroPhoto}
                     IconI={IconI}
                     IconII={IconII}
-                    HeadTextI={'If you’re looking for a home loan, BRP Finance is here to help.'}
+                    HeadTextI={'If you’re looking for a home loan, BRP Finance is here to help. '}
                     HeadTextII={'We streamline the process.'}
                     BodyI={'There are lots of good reasons why more than half of Australians now use a broker to secure a home loan. Probably the most important one that is we work for you, not the banks. We speak to you first to find out what you need, and then we use our knowledge of the market to better negotiate with the lenders. Then we get a range of options before we work out which one is right for you, not what’s right for the lenders.'}
                     BodyII={'The first step is we discuss what your financial needs and goals are. Then we research the many different products from a range of lenders to ensure we find the right solution. And just to make things even easier, we’ll do the paperwork, manage the application process and then take it through to settlement.Best of all, because this is what we specialise in, we get the process moving quickly. We use our relationships with lenders to secure your finance as fast as possible.'}
                     Button={<DownloadButton ButtonText={'Download Our Guide'} />}
                     widthIB={'55%'}
                     widthTCB={'45%'}
-                    gap={'3em'} />
+                    gap={(window.screen.availWidth <= 1440) ? '7em' : '3em'} />
             </div>
             <div className='Contact-Us'>
                 <ImageTextBox src={ContactUs}
                     HeadTextI={'Speak to a Mortgage Broker '}
                     BodyI={'when it comes to buying your first home, it’s a great idea to speak to a mortgage broker first! Heath Brunn is the Managing Director and Founder of BRP finance . He won the VIC/TAS best broker insurance sales  2021/2022 at the AFG Broker Awards. '}
-                    flexDirection={'row-reverse'}
+                    flexDirection={(window.screen.availWidth >= 1440)? 'row-reverse' : 'column-reverse'}
                     widthIB={'50%'}
                     widthTCB={'50%'}
                     DisplayI={'none'}

@@ -16,6 +16,18 @@ const ContactButtonWrapper = styled.button`
         letter-spacing: 0em;
         color: #000000;
     }
+
+    @media screen and (max-width: 1400px){
+      p{
+        font-size: 20px;
+      }
+    }
+
+    @media screen and (max-width: 768px){
+      p{
+        font-size: 14px;
+      }
+    }
 `
 
 const ContactButton = ({ButtonText, Background, Type, Width, Display, BorderRadius, BoxShadow, Padding}) => {
