@@ -6,6 +6,7 @@ import ArrowRight from './Assets/ArrowRight.svg'
 const DownloadButtonWrapper = styled.button`
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 1em;
     background: #023555;
     border-radius: 16px;
@@ -19,6 +20,17 @@ const DownloadButtonWrapper = styled.button`
         line-height: 23px;
         letter-spacing: 0em;
         color: #FFFFFF;
+    }
+
+    img{
+        width: 5%;
+    }
+
+    @media screen and (max-width: 693px){
+        p{
+            font-size: 9px;
+            line-height: 14px;
+        }
     }
 `
 

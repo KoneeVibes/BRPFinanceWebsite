@@ -6,12 +6,12 @@ import HalfStar from './Assets/HalfStar.svg';
 const StarReviewWrapper = styled.section`
     padding: var(--sectioning-gap);
 
-    .StarBox{
+    .Star-Box{
       display: flex;
       align-items: center;
     }
 
-    .TextBox p{
+    .Text-Box p{
       font-family: Montserrat;
       font-size: 22px;
       font-weight: 500;
@@ -19,20 +19,27 @@ const StarReviewWrapper = styled.section`
       letter-spacing: 0em;
       color: #FFFFFF;
     }
+
+    @media screen and (max-width: 426px){
+      .Text-Box p{
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
     
 `
 
 const StarReview = () => {
   return (
     <StarReviewWrapper>
-      <div className='StarBox'>
+      <div className='Star-Box'>
         <img src={FullStar} alt='Star Icon'></img>
         <img src={FullStar} alt='Star Icon'></img>
         <img src={FullStar} alt='Star Icon'></img>
         <img src={FullStar} alt='Star Icon'></img>
         <img src={HalfStar} alt='Star Icon'></img>
       </div>
-      <div className='TextBox'>
+      <div className='Text-Box'>
         <p>4.8/5 -From 600 reviews</p>
       </div>
     </StarReviewWrapper>

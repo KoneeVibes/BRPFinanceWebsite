@@ -14,3 +14,21 @@ html {
 * {
     /* outline: solid 1px red; */
 }
+
+@media screen and (max-width: 1024px) {
+    html{
+        --page-padding: 0 3.25em;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    html {
+        --page-padding: 0 2.0625em;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    html {
+        --page-padding: 0 0.5em;
+    }
+}

@@ -16,10 +16,67 @@
     color: #FFFFFF;
 }
 
-#HomeLoan .Header{
+#HomeLoan .Header {
     align-items: stretch;
 }
 
-#HomeLoan .Hero-Tab{
+#HomeLoan .Hero-Tab {
+    padding: var(--sectioning-gap);
+}
+
+#HomeLoan .Hero-Tab #Image-Text-Box {
+    padding: calc(2 * var(--flex-gap));
+    background: #F6F6F6;
+    border-radius: 38px;
+}
+
+#HomeLoan .Hero-Tab .Text-Card h6 {
+    font-family: 'Montserrat';
+    font-size: 55px;
+    font-weight: 600;
+    line-height: 63px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 0;
+}
+
+#HomeLoan .Hero-Tab .Text-Card-Box .Text-Card .Body-Text {
+    font-family: 'Manrope';
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: #505887;
+}
+
+#HomeLoan .Hero-Tab .Text-Card .Intro-Text {
+    font-family: 'Manrope';
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    color: #3734A9;
+}
+
+#HomeLoan .Hero-Tab .Text-Card-Box .Text-Card ul {
+    display: block;
+    color: #64607D;
+    font-family: 'Montserrat';
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 35px;
+    letter-spacing: -0.02em;
+    text-align: left;
+}
+
+#HomeLoan .Hero-Tab .Utility-Box .Text-Card {
+    flex: 1;
+}
+
+#HomeLoan .Calendly-Box {
     margin: var(--sectioning-gap);
 }

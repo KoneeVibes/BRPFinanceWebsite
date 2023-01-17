@@ -5,6 +5,9 @@ import TextCard from '../TextCard/TextCard';
 const ImageTextBoxWrapper = styled.section`
     padding: var(--sectioning-gap);
     margin: var(--page-padding);
+    display: flex;
+    flex-direction: column;
+    gap: calc(2 * var(--flex-gap));
 
     .Flex-Box{
         display: flex;
@@ -22,14 +25,13 @@ const ImageTextBoxWrapper = styled.section`
     }
 
     .Utility-Box{
-        diplay: flex;
-        align-items: center;
+        display: flex;
         justify-content: space-between;
-        gap: var(--flex-gap);
+        gap: calc(2 * var(--flex-gap));
     }
 `
 
-const ImageTextBox = ({ src, IconI, IconII, UtilityI, UtilityII, HeadTextI, HeadTextII, BodyI, BodyII, Button, widthIB, widthTCB, gap, flexDirection, DisplayI, DisplayII, DisplayCardI, DisplayCardII, alignItems, UtilityIII, UtilityIV }) => {
+const ImageTextBox = ({ src, IconI, IconII, UtilityI, UtilityII, HeadTextI, HeadTextII, BodyI, BodyII, Button, widthIB, widthTCB, gap, flexDirection, DisplayI, DisplayII, DisplayCardI, DisplayCardII, alignItems, UtilityIII, UtilityIV, IntroI, IntroII, One, Two, Three, Four }) => {
     return (
         <ImageTextBoxWrapper id='Image-Text-Box'>
             <div className='Flex-Box' style={{ gap: gap, flexDirection: flexDirection, alignItems: alignItems }}>
@@ -38,18 +40,24 @@ const ImageTextBox = ({ src, IconI, IconII, UtilityI, UtilityII, HeadTextI, Head
                 </div>
                 <div className='Text-Card-Box' style={{ flex: widthTCB }}>
                     <TextCard Icon={IconI}
+                        Intro={IntroI}
                         HeadText={HeadTextI}
                         Body={BodyI}
                         Button={Button}
                         DisplayIcon={DisplayI}
                         Display={DisplayCardI}
-                        Utility = {UtilityI} />
+                        Utility={UtilityI}
+                        one={One}
+                        two={Two}
+                        three={Three}
+                        four={Four} />
                     <TextCard Icon={IconII}
+                        Intro={IntroII}
                         HeadText={HeadTextII}
                         Body={BodyII}
                         DisplayIcon={DisplayII}
                         Display={DisplayCardII}
-                        Utility = {UtilityII} />
+                        Utility={UtilityII} />
                 </div>
             </div>
             <div className='Utility-Box'>
