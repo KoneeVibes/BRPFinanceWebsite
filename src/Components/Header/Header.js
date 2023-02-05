@@ -5,6 +5,7 @@ import StarReview from '../StarReview/StarReview';
 
 const HeaderWrapper = styled.section`
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     display: flex;
     padding: var(--page-padding);
@@ -14,6 +15,7 @@ const HeaderWrapper = styled.section`
 `
 
 const Header = ({ background, height, widthLF, widthRF, HeaderTextI, HeaderTextII, Body, gap, BtnTxt, DisplayBtn, DisplayReview }) => {
+    
     return (
         <HeaderWrapper className='Header' style={{ backgroundImage: background, height: height, gap: gap }}>
             <div className='Header-LF' style={{ flex: widthLF }}>

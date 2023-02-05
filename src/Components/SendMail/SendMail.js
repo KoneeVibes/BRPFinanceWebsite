@@ -11,10 +11,11 @@ const SendMailWrapper = styled.section`
     gap: var(--flex-gap);
     padding: var(--card-padding);
     margin: var(--page-padding);
-    background-size: 100% 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-image: url(${background});
-    min-height: 41.9375em;
+    border-radius: 23px;
+
 
     form{
         display: flex;
@@ -74,10 +75,6 @@ const SendMailWrapper = styled.section`
         margin-bottom: 0;
     }
 
-    .Right-Flank{
-        margin: auto;
-    }
-
     .Left-Flank .Body-Text{
         font-family: Montserrat;
         font-size: 18px;
@@ -85,6 +82,103 @@ const SendMailWrapper = styled.section`
         line-height: 35px;
         letter-spacing: -0.02em;
         color: #FFFFFF;
+    }
+
+    @media screen and (max-width: 1440px){
+        .Left-Flank h6{
+           font-size: 35px;
+           line-height: 45px; 
+        }
+
+        .Left-Flank .Body-Text{
+            font-size: 16px;
+            line-height: 30px;
+        }
+    }
+
+    @media screen and (max-width: 1024px){
+        flex-direction: column;
+        padding: 2em 1em;
+    }
+
+    @media screen and (max-width: 550px){
+
+        margin: 0;
+        border-radius: 0;
+
+        .Left-Flank h6{
+            font-size: 29px;
+            line-height: 39px; 
+            margin: 0;
+        }
+
+        .Left-Flank .Body-Text{
+            font-size: 14px;
+            line-height: 23px;
+        }
+
+        form{
+            padding: 2em 1em;
+        }
+
+        #Button-Text{
+            font-size: 19px;
+            line-height: 26px;
+        }
+    }
+
+    @media screen and (max-width: 380px){
+        input, textarea{
+            font-size: 14px;
+        }
+
+        .Left-Flank h6{
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+
+    @media screen and (max-width: 280px){
+        .Left-Flank h6{
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        .Left-Flank .Body-Text, input, textarea {
+            font-size: 10px;
+            line-height: 16px;
+        }
+
+        #Button-Text{
+            padding: 0 1em;
+            font-size: 14px;
+        }
+    }
+
+    @media screen and (max-width: 200px){
+        .Left-Flank h6{
+            font-size: 10px;
+            line-height: 14px;
+            word-break: break-all;
+        }
+
+        .Left-Flank .Body-Text, input, textarea {
+            font-size: 8px;
+            line-height: 15px;
+            word-break: break-all;
+        }
+    }
+
+    @media screen and (max-width: 150px){
+        input, textarea{
+            font-size: 2px;
+        }
+
+        #Button-Text{
+            padding: 0;
+            font-size: 4px;
+            word-break: break-all;
+        }
     }
 `
 

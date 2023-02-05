@@ -5,7 +5,7 @@ import { InlineWidget } from "react-calendly";
 const CalendlyWrapper = styled.section`
     display: flex;
     justify-content: space-between;
-    gap: var(--flex-gap);
+    gap: calc(2 * var(--flex-gap));
     background: #F3F3F3;
     padding: var(--page-padding);
     padding-top: 3.65625em;
@@ -16,7 +16,7 @@ const CalendlyWrapper = styled.section`
         font-family: Montserrat;
         font-size: 50px;
         font-weight: 600;
-        line-height: 40px;
+        line-height: 64px;
         letter-spacing: -0.02em;
     }
 
@@ -34,12 +34,14 @@ const CalendlyWrapper = styled.section`
 
     .Calendar-Flank{
         flex: 45%;
+        min-width: 1em;
     }
 
     .calendly-inline-widget{
         background: #F3F3F3;
         display: flex;
         justify-content: flex-end;
+        min-width: 1em !important;
     }
 
     iframe{
@@ -48,6 +50,30 @@ const CalendlyWrapper = styled.section`
         background: #F3F3F3;
         width: 35.9546875em;
     }
+
+    @media screen and (max-width: 1440px){
+        .Text-Flank h3{
+            font-size: 35px;
+        }
+
+        .Text-Flank p{
+            font-size: 16px;
+        }
+    }
+
+    @media screen and (max-width: 1024px){
+        flex-direction: column;
+        align-items: stretch;
+
+        .calendly-inline-widget{
+            justify-content: space-evenly;
+        }
+    }
+
+    @media screen and (max-width: 320px){
+        display: none;
+    }
+
 `
 
 const Calendly = () => {
@@ -61,7 +87,7 @@ const Calendly = () => {
                 <p>By the end of this audit call, you will have a clear understanding of the next steps you can take for your business to build and scale a human-centric product . </p><p>Find a time on Lemon’s (our creative director) calendar to schedule your call today and we look forward to speaking to you soon!</p>
             </div>
             <div className='Calendar-Flank'>
-                <InlineWidget url={CALENDLY}/>
+                <InlineWidget url={CALENDLY} />
             </div>
         </CalendlyWrapper>
     )

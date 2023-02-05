@@ -28,6 +28,26 @@ const ContactButtonWrapper = styled.button`
         font-size: 14px;
       }
     }
+
+    @media screen and (max-width: 280px){
+      gap: 5px;
+
+      p{
+        font-size: 10px;
+        line-height: 15px;
+      }
+    }
+
+    @media screen and (max-width: 200px){
+      img{
+        display: none;
+      }
+
+      p{
+        font-size: 7px;
+        line-height: 13px;
+      }
+    }
 `
 
 const ContactButton = ({ButtonText, Background, Type, Width, Display, BorderRadius, BoxShadow, Padding}) => {

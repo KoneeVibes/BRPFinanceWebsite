@@ -35,6 +35,80 @@ const FooterCardWrapper = styled.section`
         gap: 1em;
         padding: var(--sectioning-gap);
     }
+
+    @media screen and (min-width: 1280px) and (max-width: 1543px){
+        h5{
+            font-size: 18px;
+        }
+
+        p{
+            font-size: 12px;
+            line-height: 20px;
+        }
+    }
+
+    @media screen and (min-width: 1024px) and (max-width: 1280px){
+        h5{
+            font-size: 16px;
+        }
+
+        p{
+            font-size: 12px;
+            line-height: 20px;
+        }
+    }
+
+    @media screen and (max-width: 280px){
+        h5{
+            font-size: 16px;
+        }
+
+        p{
+            font-size: 12px;
+            line-height: 20px;
+        }
+
+        .SM-Icons img{
+            width: 50%;
+        }
+
+        .SM-Icons{
+            gap: 0;
+        }
+    }
+
+    @media screen and (max-width: 170px){
+        h5{
+            font-size: 12px;
+            word-break: break-all;
+        }
+
+        p{
+            font-size: 8px;
+            line-height: 15px;
+            word-brek: break-all;
+        }
+
+        .SM-Icons{
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .SM-Icons img{
+            width: 10%;
+        }
+    }
+
+    @media screen and (max-width: 100px){
+        h5{
+            font-size: 4px;
+        }
+
+        p{
+            font-size: 3px;
+            line-height: 7px;
+        }
+    }
 `
 
 const FooterCard = ({ HeadText, TextOne, TextTwo, TextThree, TextFour, display }) => {

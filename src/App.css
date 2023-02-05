@@ -9,14 +9,15 @@ html {
     --sectioning-gap: 3.65625em 0;
     --flex-gap: 3em;
     --card-padding: 2em;
-}
+    --nav-height: 4em;
+} 
 
 * {
     /* outline: solid 1px red; */
 }
 
 @media screen and (max-width: 1024px) {
-    html{
+    html {
         --page-padding: 0 3.25em;
     }
 }
@@ -24,6 +25,12 @@ html {
 @media screen and (max-width: 767px) {
     html {
         --page-padding: 0 2.0625em;
+    }
+}
+
+@media (max-width: 425px) {
+    html{
+        --sectioning-gap: 1.5em 0;
     }
 }
 

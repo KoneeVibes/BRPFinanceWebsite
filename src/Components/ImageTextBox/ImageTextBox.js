@@ -7,7 +7,6 @@ const ImageTextBoxWrapper = styled.section`
     margin: var(--page-padding);
     display: flex;
     flex-direction: column;
-    gap: calc(2 * var(--flex-gap));
 
     .Flex-Box{
         display: flex;
@@ -37,9 +36,9 @@ const ImageTextBoxWrapper = styled.section`
     }
 `
 
-const ImageTextBox = ({ src, IconI, IconII, UtilityI, UtilityII, HeadTextI, HeadTextII, BodyI, BodyII, Button, widthIB, widthTCB, gap, flexDirection, DisplayI, DisplayII, DisplayCardI, DisplayCardII, alignItems, UtilityIII, UtilityIV, IntroI, IntroII, One, Two, Three, Four }) => {
+const ImageTextBox = ({ src, IconI, IconII, UtilityI, UtilityII, HeadTextI, HeadTextII, BodyI, BodyII, Button, widthIB, widthTCB, gap, flexDirection, DisplayI, DisplayII, DisplayCardI, DisplayCardII, alignItems, UtilityIII, UtilityIV, IntroI, IntroII, One, Two, Three, Four, ParentGap }) => {
     return (
-        <ImageTextBoxWrapper id='Image-Text-Box'>
+        <ImageTextBoxWrapper id='Image-Text-Box' style={{gap: ParentGap}}>
             <div className='Flex-Box' style={{ gap: gap, flexDirection: flexDirection, alignItems: alignItems }}>
                 <div className='Image-Box' style={{ flex: widthIB }}>
                     <img src={src} alt='relevant illustration'></img>

@@ -32,6 +32,26 @@ const DownloadButtonWrapper = styled.button`
             line-height: 14px;
         }
     }
+
+    @media screen and (max-width: 300px){
+        gap: 5px;
+        padding: 5px;
+
+        p{
+            font-size: 5px;
+            line-height: 10px;
+        }
+    }
+
+    @media screen and (max-width: 160px){
+        img{
+            display: none;
+        }
+
+        p{
+            word-break: break-all;
+        }
+    }
 `
 
 const DownloadButton = ({ ButtonText, Direction, Background }) => {

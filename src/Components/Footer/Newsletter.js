@@ -64,6 +64,98 @@ const NewsletterWrapper = styled.section`
         border: none;
     }
 
+    @media screen and (min-width: 1280px) and (max-width: 1543px){
+        h5{
+            font-size: 18px;
+        }
+
+        p{
+            font-size: 12px;
+            line-height: 20px;
+        }
+    }
+
+    @media screen and (min-width: 1024px) and (max-width: 1280px){
+        h5{
+            font-size: 16px;
+        }
+        
+        p{
+            font-size: 12px;
+            line-height: 20px;
+        }
+    }
+
+    @media screen and (min-width: 1024px) and (max-width: 1440px){
+        #ck-email{
+            width: auto;
+        }
+    }
+
+    @media screen and (max-width: 768px){
+         #ck-email{
+            width: auto;
+        }
+
+        form{
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        p{
+            margin: revert;
+        }
+    }
+
+    @media screen and (max-width: 550px){
+        #ck-email, form button{
+            font-size: 14px;
+        }
+    }
+
+    @media screen and (max-width: 280px){
+        h5{
+            font-size: 16px;
+        }
+
+        p{
+            font-size: 12px;
+            line-height: 20px;
+        }
+
+        #ck-email, form button{
+            font-size: 10px;
+        }
+    }
+
+    @media screen and (max-width: 170px){
+        h5{
+            font-size: 12px;
+            word-break: break-all;
+        }
+
+        p{
+            font-size: 8px;
+            line-height: 15px;
+            word-brek: break-all;
+        }
+
+        #ck-email, form button{
+            font-size: 3px;
+            padding: 0;
+        }
+    }
+
+    @media screen and (max-width: 100px){
+        h5{
+            font-size: 4px;
+        }
+
+        p{
+            font-size: 3px;
+            line-height: 7px;
+        }
+    }
 `
 
 const Newsletter = () => {

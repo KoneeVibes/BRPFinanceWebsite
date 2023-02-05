@@ -1,150 +1,243 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import Logo from './Assets/Logo.svg'
+import Logo from './Assets/Logo.svg';
 
 const NavBarWrapper = styled.nav`
-    --nav-height: 4em;
+   position: sticky;
+   top: 0;
+   left: 0;
+   right: 0;
+   background: #FFFFFF;
+   box-shadow: 0 5 10px rgba(0, 0, 0, .1);
+   padding: var(--page-padding);
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   z-index: 1000;
+   min-height: var(--nav-height);
 
-    display: flex;
-    padding: var(--page-padding);
-    min-height: var(--nav-height);
-    align-items: center;
+   .Links-Container ul{
+    list-style: none; 
+    padding-inline-start: 0;
+    margin:0;
+   }
 
-    .Logo-Container{
-        flex: 30%;
+   .Links-Container ul li:nth-child(1){
+        border-top: none;
     }
 
-    ul{
-        display: flex;
-        align-items: center;
-        list-style-type: none;
-        cursor: pointer;
-        flex: 70%;
-        justify-content: space-between;
-        gap: 1em;
-    }
+   .Links-Container ul li{
+    position: relative;
+    float: left;
+   }
 
-    li{
-        color: #000000;
-        font-family: 'Montserrat', sans-serif;
-    }
+   .Links-Container ul li a{
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    padding: 0 1.4em;
+    text-decoration: none;
+    color: #000000;
+   }
 
-    a{
-        text-decoration: none;
-    }
+   .Links-Container ul li a:hover{
+    // font-styling
+    background: 
+    color: 
+   }
 
-    .bar{
+   #Drop-Down li a{
+    padding:0;
+   }
+
+   #Drop-Down li{
+    padding: 1.5em;
+   }
+
+   ul li ul{
+    position: absolute;
+    left: 0;
+    width: 270px;
+    background: #FFFFFF;
+    display: none;
+    padding-top: 1.3em;
+   }
+
+   ul li ul li{
+    border-top: 1px solid rgba(0, 0, 0, .1);
+   }
+
+   .Links-Container ul li:focus-within > ul,
+   .Links-Container ul li:hover > ul{
+    display: block;
+   }
+
+   #hamburger{
+    display: none;
+   }
+
+   label{
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    display: none;
+   }
+
+   .bar{
         display: block;
         width: 25px;
         height: 3px;
         margin: 5px auto;
         -webkit-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out;
-        background: #000000;
+        background-color: #000000;
     }
 
-    .hamburger{
+    @media (max-width: 1280px){
+    .Logo-Container img{
+        width: 70%;
+    }
+   }
+
+   @media (max-width: 1024px){
+    label{
+        display: initial;
+    }
+
+    .Links-Container{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #FFFFFF;
+        border-top: 1px solid rgba(0, 0, 0, .1);
+        padding: var(--page-padding);
+        height: max-content;
+    }
+
+    .Hide{
         display: none;
-        cursor: pointer;
     }
 
-    @media screen and (max-width: 1024px){
-
-        .hamburger{
-            display: block;     
-        }
-
-        .hamburger.active .bar:nth-child(2){
-            opacity: 0;
-        }
-
-        .hamburger.active .bar:nth-child(1){
-            transform: translateY(8px) rotate(45deg);
-        }
-
-        .hamburger.active .bar:nth-child(3){
-            transform: translateY(-8px) rotate(-45deg);
-        }
-
-        ul{
-            position: fixed;
-            left: -100%;
-            top: var(--nav-height);
-            gap: 0;
-            width: 100%;
-            height: fill-available;
-            justify-content: space-evenly;
-            margin: 0;
-            background: #FFFFFF;
-            flex-direction: column;
-            text-align: center;
-            transition: 0.3;
-            color: #000000;
-            padding: 0;
-        }
-
-        ul.active{
-            left: 0;
-        }
+    label.active .bar:nth-child(2){
+        opacity: 0;
     }
+
+    label.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    label.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .Links-Container ul li{
+        width: 100%;
+        padding: 0.5em 0;
+        border-top: 1px solid rgba(0, 0, 0, .1);
+    }
+
+    #Drop-Down li{
+        width: fill-available;
+    }
+
+    .Links-Container ul li a{
+        padding: 0;
+    }
+
+    .Links-Container ul li ul{
+        position: relative;
+        width: 100%;
+    }
+
+    .Links-Container ul li ul li{
+        background: #eeeeee;
+    }
+
+    #hamburger:not(:checked) ~ .Links-Container{
+        display: none;
+    }
+
+    #Drop-Down li{
+        padding: 0.5em;
+    }
+   }
+
+   @media (max-width: 768px){
+    .Logo-Container img{
+        width: 50%;
+    }
+   }
 `
 
 const NavBar = () => {
 
-    const [isActive, setisActive] = useState(false);
+    const [isClicked, setisClicked] = useState(false);
 
-    const toggleClass = () => {
-        setisActive(!isActive);
-        if (isActive) {
-            document.body.style.overflowY = 'visible';
-        } else {
-            document.body.style.overflowY = 'hidden';
-        }
+    const handleClick = () => {
+        setisClicked(!isClicked);
     }
-
-    useEffect(() => {
-      
-        const hamburger = document.querySelector('.hamburger');
-        const navMenu = document.querySelector('ul');
-
-        document.querySelectorAll('a').forEach(i => i.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
-            document.body.style.overflowY = 'visible';
-        }))
-
-        function resetToDefault() {
-            if (window.screen.availWidth >= 1023) {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
-                document.body.style.overflowY = 'visible';
-            }
-        }
-
-        window.addEventListener('resize', resetToDefault);
-
-    })
-    
 
     return (
         <NavBarWrapper>
             <div className='Logo-Container'>
-                <Link href='/'><img src={Logo} alt=
-                    {'Logo'}></img></Link>
+                <Link href='/'>
+                    <img src={Logo} alt=
+                        {'Logo'}></img>
+                </Link>
             </div>
-            <ul className={isActive ? "active" : null}>
-                <Link to={'/'}><li>Home</li></Link>
-                <Link to={'/about'}><li>About</li></Link>
-                <Link to={'/homeloan'}><li>Home Loan</li></Link>
-                <Link><li>Tips & Guide</li></Link>
-                <Link><li>News</li></Link>
-                <Link><li>Contact</li></Link>
-            </ul>
-            <div className={isActive ? "hamburger active" : "hamburger"} onClick={toggleClass}>
+            <input type={'checkbox'} id='hamburger'></input>
+            <label htmlFor='hamburger' onClick={handleClick} className={isClicked ? 'active' : 'not-active'}>
                 <span className='bar'></span>
                 <span className='bar'></span>
                 <span className='bar'></span>
+            </label>
+            <div className={isClicked || window.screen.availWidth >= 1024 ? 'Links-Container' : 'Hide'}>
+                <ul className='links'>
+                    <li>
+                        <Link to={'/'}>Home</Link>
+                    </li>
+                    <li>
+                        <Link to={'/about'}>About</Link>
+                    </li>
+                    <li>
+                        <Link to={'/homeloan'}
+                        >Home Loan</Link>
+                    </li>
+                    <li id='Drop-Down-Li'>
+                        <Link>Tips & Guide +</Link>
+                        <ul id='Drop-Down'>
+                            <li>
+                                <Link>Becoming a first
+                                    home buyer</Link>
+                            </li>
+                            <li>
+                                <Link>Let’s buy a home
+                                    together.</Link>
+                            </li>
+                            <li>
+                                <Link>Research and having the right people to help you are the keys when investing in property.</Link>
+                            </li>
+                            <li>
+                                <Link>Refinancing
+                                    your home
+                                    loan.</Link>
+                            </li>
+                            <li>
+                                <Link>Here’s a checklist of required documents</Link>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <Link>News</Link>
+                    </li>
+                    <li>
+                        <Link>Contact</Link>
+                    </li>
+                </ul>
             </div>
         </NavBarWrapper>
     )

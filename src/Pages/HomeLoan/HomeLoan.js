@@ -45,7 +45,9 @@ const HomeLoan = () => {
                         Body={'We consider a range of options for you. Using our understanding and knowledge of the current market, we look at different loans and quickly narrow it down to the ones that suit your specific needs. Then we choose together.'} />}
                     UtilityIV={<TextCard Icon={ProcessIcon}
                         HeadText={'And we help with the whole process.'}
-                        Body={'We don’t stop at just finding the finance. We’ll help complete the paperwork, manage the application process and follow it through to approval. Leaving you time to get excited about your new home.'} />} />
+                        Body={'We don’t stop at just finding the finance. We’ll help complete the paperwork, manage the application process and follow it through to approval. Leaving you time to get excited about your new home.'} />} 
+                    ParentGap={'calc(2 * var(--flex-gap))'}
+                    />
             </div>
             <div className='Calendly-Box'>
                 <Calendly />

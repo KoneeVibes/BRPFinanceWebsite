@@ -25,6 +25,33 @@ const FooterWrapper = styled.footer`
     letter-spacing: -0.02em;
     text-align: center;
   }
+
+  @media screen and (min-width: 1440px) and (max-width: 1728px){
+    .Upper-Section{
+      gap: 6em;
+    }
+  }
+
+  @media screen and (max-width: 1024px){
+    .Upper-Section{
+        flex-direction: column-reverse;
+    } 
+  }
+
+  @media screen and (max-width: 550px){
+    .Lower-Section{
+      font-size: 12px;
+      line-height: 26px;
+    }
+  }
+
+  @media screen and (max-width: 200px){
+    .Lower-Section{
+      font-size: 8px;
+      line-height: 15px;
+      word-break: break-all;
+    }
+  }
 `
 
 const Footer = () => {
@@ -48,7 +75,7 @@ const Footer = () => {
           TextThree={'Tuturoial'}
           TextFour={'How to write a contract'}
           display={'none'} />
-        <Newsletter/>
+        <Newsletter />
       </div>
       <div className='Lower-Section'>
         <p>Copyright @ AR Shakir 2022. All Rights Reserved.</p>

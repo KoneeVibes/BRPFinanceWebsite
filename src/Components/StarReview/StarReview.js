@@ -25,6 +25,18 @@ const StarReviewWrapper = styled.section`
         font-size: 14px;
         line-height: 20px;
       }
+
+      .Star-Box img{
+        width: 10%;
+      }
+    }
+
+    @media screen and (max-width: 200px){
+      .Text-Box p{
+        font-size: 8px;
+        line-height: 14px;
+        word-break: break-all;
+      }
     }
     
 `
