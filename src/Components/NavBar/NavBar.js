@@ -232,7 +232,7 @@ const NavBar = () => {
                         </ul>
                     </li>
                     <li>
-                        <Link>News</Link>
+                        <Link to={'/news'}>News</Link>
                     </li>
                     <li>
                         <Link>Contact</Link>
