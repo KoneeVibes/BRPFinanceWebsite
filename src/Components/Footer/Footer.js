@@ -55,6 +55,7 @@ const FooterWrapper = styled.footer`
 `
 
 const Footer = () => {
+
   return (
     <FooterWrapper>
       <div className='Upper-Section'>

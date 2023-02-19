@@ -65,6 +65,74 @@ const AnimatedHeroWrapper = styled.section`
         color: #007CB4;
         padding: 0;
     }
+
+    @media screen and (max-width: 1280px){
+        h2{
+            font-size: 50px;
+            line-height: 70px;
+        }
+
+        p{
+            font-size: 16px;
+            line-height: 25px;
+        }
+    }
+
+    @media screen and (max-width: 1024px){
+        p{
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+
+    @media screen and (max-width: 768px){
+        .Animated-Hero-Container{
+            width: initial;
+            gap: calc(var(--flex-gap) / 2);
+        }
+
+        h2{
+            font-size: 30px;
+            line-height: 41px;
+        }
+    }
+
+    @media screen and (max-width: 500px){
+        p{
+            font-size: 12px;
+            line-height: 20px;
+        }
+    }
+
+    @media screen and (max-width: 280px){
+
+        h2{
+            font-size: 10px;
+            line-height: 18px;
+            word-break: break-all;
+        }
+
+        p{
+            font-size: 5px;
+            line-height: 7px;
+            word-break: break-all;
+        }
+
+        .Animated-Hero-Container{
+            gap: calc(var(--flex-gap) / 4);
+        }
+    }
+
+    @media screen and (max-width: 150px){
+        h2{
+            font-size: 8px;
+            line-height: 14px;
+        }
+
+        .Animated-Hero-Container{
+            gap: initial;
+        }
+    }
 `
 
 const AnimatedHero = () => {

@@ -20,6 +20,13 @@ const StarReviewWrapper = styled.section`
       color: #FFFFFF;
     }
 
+    @media screen and (max-width: 1280px){
+      .Text-Box p{
+        font-size: 16px;
+        line-height: 25px;
+      }
+    }
+
     @media screen and (max-width: 426px){
       .Text-Box p{
         font-size: 14px;

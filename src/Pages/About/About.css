@@ -124,10 +124,250 @@
     text-align: left;
 }
 
-#About .Testimony-Section .Text-Card .Utility{
+#About .Testimony-Section .Text-Card .Utility {
     margin-top: var(--flex-gap);
 }
 
-#About .Calendly-Box{
+#About .Calendly-Box {
     margin: var(--sectioning-gap);
+}
+
+@media screen and (max-width: 1728px) {
+
+    #About .Hero-Tab #Image-Text-Box .Flex-Box .Text-Card-Box h6 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    #About .Hero-Tab #Image-Text-Box .Flex-Box .Text-Card-Box .Body-Text {
+        font-size: 14px;
+        line-height: 30px;
+    }
+
+    #About .Profile-Section .Text-Card h6 {
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+    #About .Profile-Section .Text-Card .Body-Text {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    #About .Testimony-Section .Text-Card h6 {
+        font-size: 37px;
+        line-height: 50px;
+    }
+
+    #About .Testimony-Section .Text-Card .Body-Text {
+        font-size: 18px;
+        line-height: 30px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .Hero-Tab .Flex-Box {
+        flex-direction: column-reverse;
+    }
+
+    #About .Header-LF h2 {
+        font-size: 40px;
+        line-height: 60px;
+    }
+
+    #About .Header-LF h1 {
+        font-size: 40px;
+        line-height: 60px;
+    }
+
+    #About .Header-LF #Body {
+        font-size: 17px;
+        line-height: 23px;
+    }
+
+    .Btn-Container {
+        margin: var(--sectioning-gap);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #About .Profile-Section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #About .Profile-Section .Text-Card .Body-Text {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .Profile-Section .Text-Card {
+        align-items: center;
+    }
+
+    .Testimony-Section .Flex-Box {
+        flex-direction: column-reverse;
+    }
+
+    #About .Hero-Tab #Image-Text-Box {
+        border-radius: 18px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #About .Header-RF {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    #About .Header-LF h1,
+    #About .Header-LF h2 {
+        font-size: 30px;
+        line-height: 41px;
+    }
+
+    #About .Header-LF #Body {
+        font-size: 14px;
+        line-height: 23px;
+    }
+
+    #About .Hero-Tab #Image-Text-Box .Flex-Box .Text-Card-Box h6 {
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    #About .Hero-Tab #Image-Text-Box .Flex-Box .Text-Card-Box .Body-Text {
+        font-size: 12px;
+        line-height: 25px;
+    }
+
+    #About .Profile-Section .Text-Card h6 {
+        font-size: 20px;
+        line-height: 27px;
+        text-align: center;
+    }
+
+    #About .Profile-Section .Text-Card .Body-Text {
+        font-size: 15px;
+        line-height: 25px;
+        text-align: center;
+    }
+
+    #About .Testimony-Section .Text-Card h6 {
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    #About .Testimony-Section .Text-Card .Body-Text {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #About .Profile-Section .Text-Card h6 {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    #About .Profile-Section .Text-Card .Body-Text {
+        font-size: 12px;
+        line-height: 16px;
+    }
+}
+
+@media screen and (max-width: 280px) {
+
+    #About .Header-LF h1,
+    #About .Header-LF h2 {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    #About .Header-LF #Body {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    #About .Hero-Tab #Image-Text-Box .Flex-Box .Text-Card-Box h6 {
+        font-size: 10px;
+        line-height: 15px;
+        word-break: break-all;
+    }
+
+    #About .Hero-Tab #Image-Text-Box .Flex-Box .Text-Card-Box .Body-Text {
+        font-size: 8px;
+        line-height: 12px;
+        word-break: break-all;
+    }
+
+    #About .Testimony-Section .Text-Card h6 {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    #About .Testimony-Section .Text-Card .Body-Text {
+        font-size: 12px;
+        line-height: 18px;
+    }
+}
+
+@media screen and (max-width: 200px) {
+
+    #About .Header-LF h1,
+    #About .Header-LF h2 {
+        font-size: 10px;
+        line-height: 18px;
+        word-break: break-all;
+    }
+
+    #About .Header-LF #Body {
+        font-size: 8px;
+        line-height: 14px;
+        word-break: break-all;
+    }
+}
+
+@media screen and (max-width: 150px) {
+    #About .Hero-Tab #Image-Text-Box .Flex-Box .Text-Card-Box h6 {
+        font-size: 8px;
+        line-height: 12px;
+    }
+
+    #About .Hero-Tab #Image-Text-Box .Flex-Box .Text-Card-Box .Body-Text {
+        font-size: 5px;
+        line-height: 7px;
+    }
+
+    #About .Hero-Tab #Image-Text-Box .Flex-Box {
+        padding: 0 2px;
+    }
+
+    #About .Hero-Tab #Image-Text-Box {
+        border-radius: 5px;
+    }
+
+    #About .Profile-Section .Text-Card h6 {
+        font-size: 8px;
+        line-height: 12px;
+    }
+
+    #About .Profile-Section .Text-Card .Body-Text {
+        font-size: 5px;
+        line-height: 7px;
+    }
+
+    #About .Testimony-Section .Text-Card h6 {
+        font-size: 10px;
+        line-height: 16px;
+        word-break: break-all;
+    }
+
+    #About .Testimony-Section .Text-Card .Body-Text {
+        font-size: 8px;
+        line-height: 14px;
+        word-break: break-all;
+    }
 }

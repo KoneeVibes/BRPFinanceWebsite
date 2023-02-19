@@ -34,7 +34,7 @@ const About = () => {
             </div>
             <div className='Hero-Tab'>
                 <ImageTextBox src={ImageBoxPhoto}
-                    flexDirection={'row-reverse'}
+                    flexDirection={window.screen.availWidth >= 1280 && 'row-reverse'}
                     DisplayII={'none'}
                     DisplayI={'none'}
                     gap={`var(--flex-gap)`}
@@ -72,7 +72,7 @@ const About = () => {
             </div>
             <div className='Testimony-Section'>
                 <ImageTextBox src={Testimony}
-                    flexDirection={'row-reverse'}
+                    flexDirection={window.screen.availWidth >= 1024 && 'row-reverse'}
                     DisplayCardII={'none'}
                     DisplayI={'none'}
                     widthIB={'57%'}
@@ -85,7 +85,7 @@ const About = () => {
                         Background={'#FFF5F5'}
                         BorderRadius={'7px'}
                         BoxShadow={'0px 4px 3px rgba(0, 0, 0, 0.25)'}
-                        Padding={`0 var(--card-padding)`} />} />
+                        Padding={(window.screen.availWidth >= 150)? `0 var(--card-padding)` : '0'} />} />
             </div>
             <div className='Calendly-Box'>
                 <Calendly />
