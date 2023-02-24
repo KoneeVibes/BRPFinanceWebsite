@@ -119,9 +119,11 @@ const NewsTab = ({ src, NewsTitle, DateStamp, IntroText, link }) => {
         <p>
           {IntroText}
         </p>
-        <ContactButton
-          Background={'none'}
-          ButtonText={'Read More '} />
+        <Link to={link}>
+          <ContactButton
+            Background={'none'}
+            ButtonText={'Read More '} />
+        </Link>
       </div>
     </NewsTabWrapper>
   )
