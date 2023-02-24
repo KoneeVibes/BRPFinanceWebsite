@@ -1,0 +1,81 @@
+#News .News-Section {
+    margin: var(--page-padding);
+    padding: var(--sectioning-gap);
+}
+
+#News .Header-LF h1 {
+    font-family: 'Montserrat';
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 101px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+#News .Header {
+    align-items: flex-end;
+}
+
+#News .News-Section h3:first-child {
+    font-family: 'Montserrat';
+    font-size: 55px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: -0.02em;
+    text-align: left;
+}
+
+@media screen and (max-width: 1728px) {
+    #News .Header-LF h1 {
+        font-size: 45px;
+        line-height: 60px;
+    }
+
+    #News .News-Section h3:first-child {
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    #News .Header-LF h1 {
+        font-size: 35px;
+        line-height: 50px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #News .Header-RF {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #News .News-Section h3:first-child {
+        font-size: 25px;
+    }
+
+    #News .Header-LF h1 {
+        font-size: 25px;
+        line-height: 35px;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    #News .Header-LF h1 {
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+    #News .News-Section h3:first-child {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 150px) {
+    #News .Header-LF h1 {
+        font-size: 8px;
+        line-height: 12px;
+        word-break: break-all;
+    }
+}

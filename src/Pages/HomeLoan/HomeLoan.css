@@ -73,10 +73,178 @@
     text-align: left;
 }
 
+#HomeLoan .Hero-Tab .Utility-Box .Text-Card .Body-Text {
+    font-family: 'Montserrat';
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 35px;
+    letter-spacing: -0.02em;
+    text-align: left;
+}
+
 #HomeLoan .Hero-Tab .Utility-Box .Text-Card {
     flex: 1;
 }
 
 #HomeLoan .Calendly-Box {
     margin: var(--sectioning-gap);
+}
+
+@media screen and (max-width: 1728px) {
+    #HomeLoan .Hero-Tab .Text-Card h6 {
+        font-size: 35px;
+        line-height: 45px;
+    }
+
+    #HomeLoan .Hero-Tab .Utility-Box .Text-Card .Body-Text {
+        font-size: 16px;
+        line-height: 30px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    #HomeLoan .Header-LF h1 {
+        font-size: 45px;
+        line-height: 60px;
+    }
+
+    #HomeLoan .Header-LF #Body {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    #HomeLoan .Hero-Tab .Text-Card h6 {
+        font-size: 26px;
+        line-height: 35px;
+    }
+
+    #HomeLoan .Hero-Tab .Text-Card-Box .Text-Card .Body-Text,
+    #HomeLoan .Hero-Tab .Text-Card-Box .Text-Card ul {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    #HomeLoan .Hero-Tab .Utility-Box .Text-Card .Body-Text {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #HomeLoan .Header-LF h1 {
+        font-size: 35px;
+        line-height: 50px;
+    }
+
+    #HomeLoan .Header-LF #Body {
+        font-size: 16px;
+    }
+
+    #HomeLoan .Hero-Tab .Text-Card h6 {
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #HomeLoan .Header-RF {
+        display: none;
+    }
+
+    #HomeLoan .Hero-Tab #Image-Text-Box {
+        margin: 0;
+        padding: 0em 1em;
+        border-radius: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #HomeLoan .Header-LF h1 {
+        font-size: 24px;
+        line-height: 35px;
+    }
+
+    #HomeLoan .Header-LF #Body {
+        font-size: 14px;
+        line-height: 25px;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    #HomeLoan .Header-LF h1 {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    #HomeLoan .Header-LF #Body {
+        font-size: 10px;
+        line-height: 15px;
+    }
+
+    #HomeLoan .Hero-Tab .Text-Card h6 {
+        font-size: 10px;
+        line-height: 15px;
+    }
+
+    #HomeLoan .Hero-Tab .Utility-Box .Text-Card .Body-Text {
+        font-size: 8px;
+        line-height: 15px;
+    }
+
+    #HomeLoan .Hero-Tab .Text-Card-Box .Text-Card ul {
+        font-size: 7px;
+        line-height: 15px;
+    }
+
+    #HomeLoan .Hero-Tab .Text-Card-Box .Text-Card .Body-Text {
+        font-size: 10px;
+        line-height: 15px;
+    }
+
+    #HomeLoan .Hero-Tab .Utility-Box .Text-Card .Icon-Container img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 150px) {
+    #HomeLoan .Header-LF h1 {
+        font-size: 8px;
+        line-height: 12px;
+        word-break: break-all;
+    }
+
+    #HomeLoan .Header-LF #Body {
+        font-size: 5px;
+        line-height: 10px;
+        word-break: break-all;
+    }
+
+    #HomeLoan .Hero-Tab .Text-Card h6 {
+        font-size: 8px;
+        line-height: 12px;
+        word-break: break-all;
+    }
+
+    #HomeLoan .Hero-Tab .Utility-Box .Text-Card .Body-Text {
+        font-size: 5px;
+        line-height: 8px;
+        word-break: break-all;
+    }
+
+    #HomeLoan .Hero-Tab .Text-Card .Intro-Text {
+        font-size: 10px;
+        line-height: 15px;
+        word-break: break-all;
+    }
+
+    #HomeLoan .Hero-Tab .Text-Card-Box .Text-Card .Body-Text {
+        font-size: 8px;
+        line-height: 12px;
+        word-break: break-all;
+    }
+
+    #HomeLoan .Hero-Tab .Text-Card-Box .Text-Card ul {
+        word-break: break-all;
+        line-height: 10px;
+    }
 }

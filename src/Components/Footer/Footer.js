@@ -57,7 +57,7 @@ const FooterWrapper = styled.footer`
 const Footer = () => {
 
   return (
-    <FooterWrapper>
+    <FooterWrapper id='Footer'>
       <div className='Upper-Section'>
         <FooterCard HeadText={'HOW WE CAN HELP'}
           TextOne={'Becoming a first home buyer'}

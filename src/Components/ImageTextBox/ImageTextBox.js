@@ -34,6 +34,18 @@ const ImageTextBoxWrapper = styled.section`
             gap: 4em;
         }
     }
+
+    @media screen and (max-width: 1024px){
+        .Utility-Box{
+            gap: var(--flex-gap);
+        }
+    }
+
+    @media screen and (max-width: 768px){
+        .Utility-Box{
+            flex-direction: column;
+        }
+    }
 `
 
 const ImageTextBox = ({ src, IconI, IconII, UtilityI, UtilityII, HeadTextI, HeadTextII, BodyI, BodyII, Button, widthIB, widthTCB, gap, flexDirection, DisplayI, DisplayII, DisplayCardI, DisplayCardII, alignItems, UtilityIII, UtilityIV, IntroI, IntroII, One, Two, Three, Four, ParentGap }) => {

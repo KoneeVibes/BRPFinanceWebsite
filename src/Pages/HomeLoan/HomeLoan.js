@@ -32,10 +32,10 @@ const HomeLoan = () => {
                     IntroI={'Why Choose Us'}
                     HeadTextI={'We’ll help you find the right loan.'}
                     BodyI={'Because we work for you, a broker will always put in that extra effort.'}
-                    gap={`calc(2 * var(--flex-gap))`}
+                    gap={(window.screen.availWidth <= 768)? `var(--flex-gap)` : `calc(2 * var(--flex-gap))`}
                     widthIB={'50%'}
                     widthTCB={'50%'}
-                    flexDirection={'row-reverse'}
+                    flexDirection={(window.screen.availWidth <= 768)? 'column-reverse' : 'row-reverse'}
                     One={'We’ll meet at a place and time that suits you.'}
                     Two={'We do the legwork.'}
                     Three={'You’ll get a choice of different lenders.'}
@@ -45,9 +45,9 @@ const HomeLoan = () => {
                         Body={'We consider a range of options for you. Using our understanding and knowledge of the current market, we look at different loans and quickly narrow it down to the ones that suit your specific needs. Then we choose together.'} />}
                     UtilityIV={<TextCard Icon={ProcessIcon}
                         HeadText={'And we help with the whole process.'}
-                        Body={'We don’t stop at just finding the finance. We’ll help complete the paperwork, manage the application process and follow it through to approval. Leaving you time to get excited about your new home.'} />} 
-                    ParentGap={'calc(2 * var(--flex-gap))'}
-                    />
+                        Body={'We don’t stop at just finding the finance. We’ll help complete the paperwork, manage the application process and follow it through to approval. Leaving you time to get excited about your new home.'} />}
+                    ParentGap={(window.screen.availWidth <= 768) ? 'var(--flex-gap)' : 'calc(2 * var(--flex-gap))'}
+                />
             </div>
             <div className='Calendly-Box'>
                 <Calendly />

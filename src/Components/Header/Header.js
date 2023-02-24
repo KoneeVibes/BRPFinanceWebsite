@@ -11,7 +11,7 @@ const HeaderWrapper = styled.section`
     padding: var(--page-padding);
     padding-top: 4em;
     align-items: center;
-    justify-content: center;
+    justify-content: 'flex-start';
 `
 
 const Header = ({ background, height, widthLF, widthRF, HeaderTextI, HeaderTextII, Body, gap, BtnTxt, DisplayBtn, DisplayReview }) => {

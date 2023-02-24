@@ -54,6 +54,7 @@ const CalendlyWrapper = styled.section`
     @media screen and (max-width: 1440px){
         .Text-Flank h3{
             font-size: 35px;
+            line-height: 45px;
         }
 
         .Text-Flank p{

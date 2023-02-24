@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import styled from 'styled-components';
 import Logo from './Assets/Logo.svg';
 
@@ -235,7 +236,7 @@ const NavBar = () => {
                         <Link to={'/news'}>News</Link>
                     </li>
                     <li>
-                        <Link>Contact</Link>
+                        <HashLink to='#Footer' smooth>Contact</HashLink>
                     </li>
                 </ul>
             </div>
