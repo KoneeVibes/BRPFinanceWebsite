@@ -3,7 +3,7 @@
     padding: var(--sectioning-gap);
 }
 
-#News .Header-LF h1 {
+#News .Header-LF h1, #NewsI .Header-LF h1 {
     font-family: 'Montserrat';
     font-size: 64px;
     font-weight: 700;
@@ -13,7 +13,7 @@
     color: #FFFFFF;
 }
 
-#News .Header {
+#News .Header, #NewsI .Header {
     align-items: flex-end;
 }
 
@@ -27,7 +27,7 @@
 }
 
 @media screen and (max-width: 1728px) {
-    #News .Header-LF h1 {
+    #News .Header-LF h1, #NewsI .Header-LF h1 {
         font-size: 45px;
         line-height: 60px;
     }
@@ -38,14 +38,14 @@
 }
 
 @media screen and (max-width: 1280px) {
-    #News .Header-LF h1 {
+    #News .Header-LF h1, #NewsI .Header-LF h1 {
         font-size: 35px;
         line-height: 50px;
     }
 }
 
 @media screen and (max-width: 1024px) {
-    #News .Header-RF {
+    #News .Header-RF, #NewsI .Header-RF {
         display: none;
     }
 }
@@ -55,14 +55,14 @@
         font-size: 25px;
     }
 
-    #News .Header-LF h1 {
+    #News .Header-LF h1, #NewsI .Header-LF h1 {
         font-size: 25px;
         line-height: 35px;
     }
 }
 
 @media screen and (max-width: 280px) {
-    #News .Header-LF h1 {
+    #News .Header-LF h1, #NewsI .Header-LF h1 {
         font-size: 14px;
         line-height: 25px;
     }
@@ -73,7 +73,7 @@
 }
 
 @media screen and (max-width: 150px) {
-    #News .Header-LF h1 {
+    #News .Header-LF h1, #NewsI .Header-LF h1 {
         font-size: 8px;
         line-height: 12px;
         word-break: break-all;
