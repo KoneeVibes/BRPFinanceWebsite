@@ -1,0 +1,149 @@
+#BuyTogether .Header {
+    align-items: flex-start;
+}
+
+#BuyTogether .Text-Cards {
+    margin: var(--page-padding);
+    padding: var(--sectioning-gap);
+}
+
+#BuyTogether .Header .Header-LF h1 {
+    font-family: 'Montserrat';
+    font-size: 65px;
+    font-weight: 600;
+    line-height: 77px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+#BuyTogether .Header .Header-LF #Body {
+    font-family: 'Montserrat';
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 33px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+#BuyTogether .Text-Cards h6 {
+    font-family: 'Montserrat';
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 54px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 0;
+}
+
+#BuyTogether .Text-Cards p {
+    font-family: 'Montserrat';
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 45px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #9C9C9C;
+}
+
+#BuyTogether .Text-Cards .Text-Card {
+    margin: var(--sectioning-gap);
+}
+
+#BuyTogether #Image-Text-Box {
+    padding: calc(2 * var(--flex-gap));
+    background: #F6F6F6;
+    border-radius: 38px;
+}
+
+#BuyTogether #Image-Text-Box .Image-Box img, 
+#BuyTogether .Top-Tips #Image-Text-Box .Image-Box img {
+    object-fit: cover;
+    height: 100%;
+}
+
+#BuyTogether #Image-Text-Box .Text-Card-Box .Intro-Text {
+    font-family: 'Manrope';
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0em;
+    color: #3734A9;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+
+#BuyTogether #Image-Text-Box .Text-Card-Box .Text-Card:nth-child(1) .Text-Container h6 {
+    font-family: 'Montserrat';
+    font-size: 55px;
+    font-weight: 600;
+    line-height: 63px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 0;
+    color: #000000;
+}
+
+#BuyTogether #Image-Text-Box .Text-Card .Text-Container h6 {
+    font-family: 'Manrope';
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: #64607D;
+    margin: 0;
+}
+
+#BuyTogether #Image-Text-Box .Text-Card .Text-Container .Body-Text {
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 35px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: #64607D;
+}
+
+#BuyTogether #Image-Text-Box .Text-Card-Box {
+    gap: 0;
+}
+
+#BuyTogether .Top-Tips,
+#BuyTogether .SendMail-Box {
+    margin: 6em 0;
+}
+
+#BuyTogether .Top-Tips #Image-Text-Box {
+    padding: 0;
+    overflow: hidden;
+}
+
+#BuyTogether .Top-Tips #Image-Text-Box .Text-Card-Box {
+    justify-content: center;
+    padding: var(--card-padding);
+}
+
+#BuyTogether .Top-Tips #Image-Text-Box .Text-Card .Text-Container h6 {
+    font-family: 'Montserrat';
+    font-size: 55px;
+    font-weight: 600;
+    line-height: 67px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000000;
+}
+
+#BuyTogether .Top-Tips .Text-Card .Text-Container li {
+    font-family: "Montserrat";
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 35px;
+    letter-spacing: -0.02em;
+    text-align: left;
+}
+
+#BuyTogether .Top-Tips .Text-Card-Box .Intro-Text {
+    display: none;
+}

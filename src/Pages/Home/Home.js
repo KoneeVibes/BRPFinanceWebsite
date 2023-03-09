@@ -37,6 +37,7 @@ const Home = () => {
                 <ImageTextBox src={HeroPhoto}
                     IconI={IconI}
                     IconII={IconII}
+                    DisplayCardIII={"none"}
                     HeadTextI={'If you’re looking for a home loan, BRP Finance is here to help. '}
                     HeadTextII={'We streamline the process.'}
                     BodyI={'There are lots of good reasons why more than half of Australians now use a broker to secure a home loan. Probably the most important one that is we work for you, not the banks. We speak to you first to find out what you need, and then we use our knowledge of the market to better negotiate with the lenders. Then we get a range of options before we work out which one is right for you, not what’s right for the lenders.'}
@@ -56,6 +57,7 @@ const Home = () => {
                     DisplayI={'none'}
                     DisplayII={'none'}
                     DisplayCardII={'none'}
+                    DisplayCardIII={'none'}
                     Button={<ContactButton ButtonText={'Contact a Mortage Broker'}
                         Background={'#F6F6F6'} />}
                     alignItems={'center'} />

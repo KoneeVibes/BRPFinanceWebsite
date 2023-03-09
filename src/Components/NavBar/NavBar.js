@@ -212,23 +212,23 @@ const NavBar = () => {
                         <Link>Tips & Guide +</Link>
                         <ul id='Drop-Down'>
                             <li>
-                                <Link>Becoming a first
+                                <Link to={"/Tips & Guide/Becoming a first home buyer"}>Becoming a first
                                     home buyer</Link>
                             </li>
                             <li>
-                                <Link>Let’s buy a home
+                                <Link to={"/Tips & Guide/Let’s buy a home together."}>Let’s buy a home
                                     together.</Link>
                             </li>
                             <li>
-                                <Link>Research and having the right people to help you are the keys when investing in property.</Link>
+                                <Link to={"/Tips & Guide/Research and having the right people to help you are the keys when investing in property."}>Research and having the right people to help you are the keys when investing in property.</Link>
                             </li>
                             <li>
-                                <Link>Refinancing
+                                <Link to={"/Tips & Guide/Refinancing your homeloan."}>Refinancing
                                     your home
                                     loan.</Link>
                             </li>
                             <li>
-                                <Link>Here’s a checklist of required documents</Link>
+                                <Link to={"/Tips & Guide/Here’s a checklist of required documents"}>Here’s a checklist of required documents</Link>
                             </li>
                         </ul>
                     </li>

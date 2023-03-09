@@ -35,6 +35,7 @@ const About = () => {
             <div className='Hero-Tab'>
                 <ImageTextBox src={ImageBoxPhoto}
                     flexDirection={window.screen.availWidth >= 1280 && 'row-reverse'}
+                    DisplayCardIII={'none'}
                     DisplayII={'none'}
                     DisplayI={'none'}
                     gap={`var(--flex-gap)`}
@@ -73,6 +74,7 @@ const About = () => {
             <div className='Testimony-Section'>
                 <ImageTextBox src={Testimony}
                     flexDirection={window.screen.availWidth >= 1024 && 'row-reverse'}
+                    DisplayCardIII={'none'}
                     DisplayCardII={'none'}
                     DisplayI={'none'}
                     widthIB={'57%'}

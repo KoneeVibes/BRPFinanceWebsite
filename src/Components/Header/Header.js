@@ -14,7 +14,7 @@ const HeaderWrapper = styled.section`
     justify-content: 'flex-start';
 `
 
-const Header = ({ background, height, widthLF, widthRF, HeaderTextI, HeaderTextII, Body, gap, BtnTxt, DisplayBtn, DisplayReview }) => {
+const Header = ({ background, height, widthLF, widthRF, HeaderTextI, HeaderTextII, Body, gap, BtnTxt, DisplayBtn, DisplayReview, src }) => {
     
     return (
         <HeaderWrapper className='Header' style={{ backgroundImage: background, height: height, gap: gap }}>
@@ -30,7 +30,7 @@ const Header = ({ background, height, widthLF, widthRF, HeaderTextI, HeaderTextI
                 </div>
             </div>
             <div className='Header-RF' style={{ flex: widthRF }}>
-
+                {/* <img src={src} alt='Header Side Img'></img> */}
             </div>
         </HeaderWrapper>
     )

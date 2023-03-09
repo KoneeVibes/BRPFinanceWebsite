@@ -56,21 +56,18 @@
     font-weight: 700;
     line-height: 19px;
     letter-spacing: 0em;
-    text-align: left;
     margin-block-start: 1em;
     margin-block-end: 1em;
     color: #3734A9;
 }
 
-#HomeLoan .Hero-Tab .Text-Card-Box .Text-Card ul {
-    display: block;
+#HomeLoan .Hero-Tab .Text-Card-Box .Text-Card li {
     color: #64607D;
     font-family: 'Montserrat';
     font-size: 18px;
     font-weight: 500;
     line-height: 35px;
     letter-spacing: -0.02em;
-    text-align: left;
 }
 
 #HomeLoan .Hero-Tab .Utility-Box .Text-Card .Body-Text {
@@ -79,7 +76,6 @@
     font-weight: 500;
     line-height: 35px;
     letter-spacing: -0.02em;
-    text-align: left;
 }
 
 #HomeLoan .Hero-Tab .Utility-Box .Text-Card {

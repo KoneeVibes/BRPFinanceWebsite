@@ -48,9 +48,9 @@ const ImageTextBoxWrapper = styled.section`
     }
 `
 
-const ImageTextBox = ({ src, IconI, IconII, UtilityI, UtilityII, HeadTextI, HeadTextII, BodyI, BodyII, Button, widthIB, widthTCB, gap, flexDirection, DisplayI, DisplayII, DisplayCardI, DisplayCardII, alignItems, UtilityIII, UtilityIV, IntroI, IntroII, One, Two, Three, Four, ParentGap }) => {
+const ImageTextBox = ({ src, IconI, IconII, UtilityI, UtilityII, HeadTextI, HeadTextII, BodyI, BodyII, Button, widthIB, widthTCB, gap, flexDirection, DisplayI, DisplayII, DisplayCardI, DisplayCardII, alignItems, UtilityIII, UtilityIV, IntroI, IntroII, One, Two, Three, Four, Five, Six, Seven, ParentGap, displayOne, displayTwo, displayThree, displayFour, displayFive, displaySix, displaySeven, displayEight, displayNine, displayTen, displayUl, IconIII, IntroIII, HeadTextIII, BodyIII, DisplayCardIII, DisplayIII, UtilityV }) => {
     return (
-        <ImageTextBoxWrapper id='Image-Text-Box' style={{gap: ParentGap}}>
+        <ImageTextBoxWrapper id='Image-Text-Box' style={{ gap: ParentGap }}>
             <div className='Flex-Box' style={{ gap: gap, flexDirection: flexDirection, alignItems: alignItems }}>
                 <div className='Image-Box' style={{ flex: widthIB }}>
                     <img src={src} alt='relevant illustration'></img>
@@ -67,7 +67,21 @@ const ImageTextBox = ({ src, IconI, IconII, UtilityI, UtilityII, HeadTextI, Head
                         one={One}
                         two={Two}
                         three={Three}
-                        four={Four} />
+                        four={Four}
+                        five={Five}
+                        six={Six}
+                        seven={Seven}
+                        displayOne={displayOne}
+                        displayTwo={displayTwo}
+                        displayThree={displayThree}
+                        displayFour={displayFour}
+                        displayFive={displayFive}
+                        displaySix={displaySix}
+                        displaySeven={displaySeven}
+                        displayEight={displayEight}
+                        displayNine={displayNine}
+                        displayTen={displayTen}
+                        displayUl={displayUl} />
                     <TextCard Icon={IconII}
                         Intro={IntroII}
                         HeadText={HeadTextII}
@@ -75,6 +89,14 @@ const ImageTextBox = ({ src, IconI, IconII, UtilityI, UtilityII, HeadTextI, Head
                         DisplayIcon={DisplayII}
                         Display={DisplayCardII}
                         Utility={UtilityII} />
+                    <TextCard
+                        Icon={IconIII} 
+                        Intro={IntroIII}
+                        HeadText={HeadTextIII}
+                        Body={BodyIII}
+                        DisplayIcon={DisplayIII}
+                        Display={DisplayCardIII}
+                        Utility={UtilityV}/>
                 </div>
             </div>
             <div className='Utility-Box'>

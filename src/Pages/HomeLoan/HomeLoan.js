@@ -28,6 +28,7 @@ const HomeLoan = () => {
             <div className='Hero-Tab'>
                 <ImageTextBox src={ImageBoxPhoto}
                     DisplayCardII={'none'}
+                    DisplayCardIII={'none'}
                     DisplayI={'none'}
                     IntroI={'Why Choose Us'}
                     HeadTextI={'We’ll help you find the right loan.'}
@@ -47,6 +48,13 @@ const HomeLoan = () => {
                         HeadText={'And we help with the whole process.'}
                         Body={'We don’t stop at just finding the finance. We’ll help complete the paperwork, manage the application process and follow it through to approval. Leaving you time to get excited about your new home.'} />}
                     ParentGap={(window.screen.availWidth <= 768) ? 'var(--flex-gap)' : 'calc(2 * var(--flex-gap))'}
+                    displayFive={'none'}
+                    displaySix={'none'}
+                    displaySeven={'none'}
+                    displayEight={'none'}
+                    displayNine={'none'}
+                    displayTen={'none'}
+                    displayUl={'block'}
                 />
             </div>
             <div className='Calendly-Box'>

@@ -1,0 +1,128 @@
+#Research .Header {
+    align-items: flex-start;
+}
+
+#Research .Header .Header-LF h1 {
+    font-family: 'Montserrat';
+    font-size: 55px;
+    font-weight: 600;
+    line-height: 65px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+#Research .Header .Header-LF #Body {
+    font-family: 'Montserrat';
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 33px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+#Research .ImageBox-Container .Image-Box {
+    border-radius: inherit;
+}
+
+#Research .ImageBox-Container .Text-Card .Text-Container .Body-Text {
+    font-family: 'Montserrat';
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #9C9C9C;
+}
+
+#Research .ImageBox-Container .Flex-Box {
+    padding: var(--flex-gap);
+    background-color: #F6F6F6;
+    border-radius: 38px;
+}
+
+#Research .ImageBox-Container .Image-Box img {
+    object-fit: cover;
+    height: 100%;
+    border-radius: inherit;
+}
+
+#Research .TextCards {
+    padding: var(--page-padding);
+    margin: 2em 0;
+    display: flex;
+    gap: var(--flex-gap);
+}
+
+#Research .TextCards .Left-Flank,
+#Research .TextCards .Right-Flank {
+    display: flex;
+    flex-direction: column;
+    gap: var(--flex-gap);
+    justify-content: space-between;
+}
+
+#Research .TextCards .Text-Card {
+    padding: var(--card-padding);
+}
+
+#Research .TextCards .Text-Card h6 {
+    font-family: 'Montserrat';
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 35px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+
+#Research .TextCards .Text-Card .Body-Text {
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 35px;
+    letter-spacing: -0.02em;
+    text-align: left;
+}
+
+#Research .Top-Tips #Image-Text-Box {
+    padding: 0;
+    overflow: hidden;
+    background: #F6F6F6;
+    border-radius: 38px
+}
+
+#Research .Top-Tips{
+    padding: var(--sectioning-gap);
+}
+
+#Research #Image-Text-Box .Text-Card-Box .Text-Container h6 {
+    font-family: 'Montserrat';
+    font-size: 55px;
+    font-weight: 600;
+    line-height: 67px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 0;
+}
+
+#Research #Image-Text-Box .Text-Card-Box .Text-Container li {
+    font-family: 'Montserrat';
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 35px;
+    letter-spacing: -0.02em;
+    text-align: left;
+}
+
+#Research #Image-Text-Box .Image-Box img {
+    object-fit: cover;
+    height: 100%;
+}
+
+#Research #Image-Text-Box .Text-Card-Box {
+    justify-content: center;
+    padding: var(--card-padding);
+}
