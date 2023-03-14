@@ -1,0 +1,89 @@
+#Refinancing .Header {
+    align-items: flex-start;
+}
+
+#Refinancing .Header .Header-LF h1 {
+    font-family: 'Montserrat';
+    font-size: 68px;
+    font-weight: 600;
+    line-height: 81px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+#Refinancing .Header .Header-LF #Body {
+    font-family: 'Montserrat';
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+#Refinancing .ImageBox-Container .Flex-Box {
+    padding: var(--flex-gap);
+    background-color: #F6F6F6;
+    border-radius: 38px;
+}
+
+#Refinancing .ImageBox-Container .Image-Box {
+    border-radius: inherit;
+}
+
+#Refinancing .ImageBox-Container .Image-Box img {
+    object-fit: cover;
+    height: 100%;
+    border-radius: inherit;
+}
+
+#Refinancing .ImageBox-Container .Text-Card .Text-Container .Body-Text {
+    font-family: 'Montserrat';
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #9C9C9C;
+}
+
+#Refinancing .TextCards {
+    margin: var(--page-padding);
+}
+
+#Refinancing .TextCards>h6 {
+    font-family: 'Montserrat';
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 54px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+
+#Refinancing .TextCards .Text-Card .Text-Container h6 {
+    font-family: 'Montserrat';
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+
+#Refinancing .TextCards .Text-Card .Text-Container .Body-Text {
+    font-family: 'Montserrat';
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #9C9C9C;
+}
+
+#Refinancing .Calendly-Box{
+    padding: var(--sectioning-gap);
+}
