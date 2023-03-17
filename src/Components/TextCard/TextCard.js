@@ -21,6 +21,21 @@ const TextCardWrapper = styled.div`
         text-align: left;
         color: #000000 !important;
     }
+
+    @media screen and (max-width: 1728px){
+        .Text-Container ul h6{
+            font-size: 16px !important;
+            line-height: 22px !important;
+        }
+    }
+
+    @media screen and (max-width: 150px){
+        .Text-Container ul h6{
+            font-size: 5px !important;
+            line-height: 12px !important;
+            word-break: break-all;
+        }
+    }
 `
 
 const TextCard = ({ Icon, HeadText, Body, Button, DisplayIcon, Display, Background, Border, BorderRadius, BoxShadow, Gap, FlexDirection, Utility, Intro, one, two, three, four, five, six, seven, eight, nine, ten, displayHeadText, HeadTextI, displayUl, displayOne, displayTwo, displayThree, displayFour, displayFive, displaySix, displaySeven, displayEight, displayNine, displayTen, displaySubH6, UtiityI, UtilityII }) => {

@@ -94,7 +94,7 @@
     border-radius: 38px
 }
 
-#Research .Top-Tips{
+#Research .Top-Tips {
     padding: var(--sectioning-gap);
 }
 
@@ -125,4 +125,150 @@
 #Research #Image-Text-Box .Text-Card-Box {
     justify-content: center;
     padding: var(--card-padding);
+}
+
+@media screen and (max-width: 1728px) {
+    #Research .Header .Header-LF h1 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    #Research .Header .Header-LF #Body {
+        font-size: 18px;
+        line-height: 32px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #Research .Header .Header-LF h1 {
+        font-size: 30px;
+        line-height: 38px;
+    }
+
+    #Research .Header .Header-LF #Body {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    #Research .ImageBox-Container #Image-Text-Box .Text-Card-Box {
+        padding: 0;
+    }
+
+    #Research .TextCards {
+        flex-direction: column;
+    }
+
+    #Research #Image-Text-Box .Text-Card-Box .Text-Container h6 {
+        font-size: 35px;
+        line-height: 50px;
+    }
+
+    #Research #Image-Text-Box .Text-Card-Box .Text-Container li {
+        font-size: 16px;
+        line-height: 29px;
+    }
+
+    #Research .Top-Tips .Flex-Box {
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #Research .Header {
+        flex-direction: column;
+    }
+
+    #Research .ImageBox-Container .Flex-Box {
+        padding: var(--card-padding);
+    }
+
+    #Research .ImageBox-Container .Text-Card .Text-Container .Body-Text {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    #Research .Header .Header-LF #Body {
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    #Research #Image-Text-Box .Text-Card-Box .Text-Container h6 {
+        font-size: 30px;
+        line-height: 37px;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    #Research .Header .Header-LF h1 {
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    #Research .Header .Header-LF #Body {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    #Research .ImageBox-Container .Flex-Box,
+    #Research .TextCards .Text-Card,
+    #Research #Image-Text-Box .Text-Card-Box {
+        padding: 1em;
+    }
+
+    #Research .ImageBox-Container .Text-Card .Text-Container .Body-Text,
+    #Research .TextCards .Text-Card .Body-Text,
+    #Research #Image-Text-Box .Text-Card-Box .Text-Container li {
+        font-size: 14px;
+        word-break: break-all;
+    }
+
+    #Research .TextCards .Text-Card h6 {
+        font-size: 18px;
+        line-height: 30px;
+        word-break: break-all;
+    }
+
+    #Research .TextCards .Text-Card h6 {
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    #Research #Image-Text-Box .Text-Card-Box .Text-Container h6 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+
+@media screen and (max-width: 150px) {
+
+    #Research .Header .Header-LF h1,
+    #Research .TextCards .Text-Card h6,
+    #Research #Image-Text-Box .Text-Card-Box .Text-Container h6 {
+        font-size: 8px;
+        line-height: 15px;
+        word-break: break-all;
+    }
+
+    #Research .Header .Header-LF #Body,
+    #Research .ImageBox-Container .Text-Card .Text-Container .Body-Text,
+    #Research .TextCards .Text-Card .Body-Text,
+    #Research #Image-Text-Box .Text-Card-Box .Text-Container li {
+        font-size: 5px;
+        line-height: 12px;
+        word-break: break-all;
+    }
+
+    #Research .ImageBox-Container .Flex-Box,
+    #Research .TextCards .Text-Card,
+    #Research #Image-Text-Box .Text-Card-Box {
+        padding: 5px;
+    }
+
+    #Research .TextCards .Text-Card .Icon-Container img {
+        width: 15%;
+    }
 }

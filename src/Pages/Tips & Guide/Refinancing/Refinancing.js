@@ -30,7 +30,7 @@ const Refinancing = () => {
                     DisplayCardIII={'none'}
                     DisplayI={'none'}
                     src={ImageBoxPhoto}
-                    flexDirection={'row-reverse'}
+                    flexDirection={(window.screen.availWidth > 768)? 'row-reverse' : 'column-reverse'}
                     gap={"var(--flex-gap)"}
                     widthIB={'50%'}
                     widthTCB={'50%'} />

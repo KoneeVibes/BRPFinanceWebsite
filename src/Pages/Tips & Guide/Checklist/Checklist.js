@@ -211,7 +211,8 @@ const Checklist = () => {
                             HeadTextI={'Unconditional contracts'}
                             Body={'A deposit is required once a Contract of Sale has been signed by both very cautious about signing an unconditional contract or bidding at an auction especially if you’re not certain about whether you’ll be able to obtain finance or about buying the home. You should also consider obtaining legal advice before signing a sale contract or bidding at an auction. arties. You won’t yet have access to your home loan, so your deposit will need to come from savings or elsewhere. You may also be able to arrange a deposit bond until settlement. '} />
                         <TextCard
-                            DisplayIcon={'none'} />
+                            DisplayIcon={'none'}
+                            Display ={(window.screen.availWidth <= 918) && 'none'} />
                     </div>
                 </div>
             </div>

@@ -38,7 +38,7 @@ const Research = () => {
                     DisplayCardIII={'none'}
                     DisplayI={'none'}
                     src={ImageBoxPhoto}
-                    flexDirection={'row-reverse'}
+                    flexDirection={(window.screen.availWidth >= 1024)? 'row-reverse' : 'column'}
                     gap={"var(--flex-gap)"}
                     widthIB={'50%'}
                     widthTCB={'50%'} />

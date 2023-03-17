@@ -84,6 +84,112 @@
     color: #9C9C9C;
 }
 
-#Refinancing .Calendly-Box{
+#Refinancing .Calendly-Box {
     padding: var(--sectioning-gap);
+}
+
+@media screen and (max-width: 1440px) {
+    #Refinancing .Header .Header-LF h1 {
+        font-size: 55px;
+        line-height: 70px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #Refinancing .Header {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #Refinancing .Header .Header-LF h1 {
+        font-size: 40px;
+        line-height: 55px;
+    }
+
+    #Refinancing .Header .Header-LF #Body {
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    #Refinancing .ImageBox-Container .Text-Card .Text-Container .Body-Text {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #Refinancing .Header .Header-LF h1 {
+        font-size: 30px;
+        line-height: 38px;
+    }
+
+    #Refinancing .TextCards>h6 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    #Refinancing .ImageBox-Container .Flex-Box {
+        padding: var(--card-padding);
+    }
+
+    #Refinancing .TextCards .Text-Card .Text-Container h6 {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    #Refinancing .TextCards .Text-Card .Text-Container .Body-Text {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    #Refinancing .Header .Header-LF h1 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    #Refinancing .Header .Header-LF #Body {
+        font-size: 16px;
+    }
+
+    #Refinancing .ImageBox-Container .Text-Card .Text-Container .Body-Text,
+    #Refinancing .TextCards .Text-Card .Text-Container .Body-Text {
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    #Refinancing .ImageBox-Container .Flex-Box {
+        padding: 5px;
+    }
+
+    #Refinancing .TextCards>h6 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    #Refinancing .TextCards .Text-Card .Text-Container h6 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+@media screen and (max-width: 150px) {
+
+    #Refinancing .Header .Header-LF h1,
+    #Refinancing .TextCards>h6,
+    #Refinancing .TextCards .Text-Card .Text-Container h6 {
+        font-size: 8px;
+        line-height: 15px;
+        word-break: break-all;
+    }
+
+    #Refinancing .Header .Header-LF #Body,
+    #Refinancing .ImageBox-Container .Text-Card .Text-Container .Body-Text,
+    #Refinancing .TextCards .Text-Card .Text-Container .Body-Text {
+        font-size: 5px;
+        line-height: 12px;
+        word-break: break-all;
+    }
 }
