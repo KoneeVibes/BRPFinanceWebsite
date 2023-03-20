@@ -134,6 +134,170 @@
     text-align: left;
 }
 
-#Becoming .Calendly-Box{
+#Becoming .Calendly-Box {
     padding: var(--sectioning-gap);
+}
+
+@media screen and (max-width: 1728px) {
+
+    #Becoming .Text-Card-Box .Text-Container h6,
+    #Becoming .Utility-Box .Text-Container h6 {
+        font-size: 45px;
+        line-height: 55px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    #Becoming .Header .Header-LF h1 {
+        font-size: 45px;
+        line-height: 60px;
+    }
+
+    #Becoming .Header .Header-LF #Body {
+        font-size: 17px;
+        line-height: 25px;
+    }
+
+    #Becoming .Text-Cards h6 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    #Becoming .Text-Cards p,
+    #Becoming .Text-Cards li {
+        font-size: 17px;
+        line-height: 30px;
+    }
+
+    #Becoming #Image-Text-Box {
+        padding: var(--flex-gap);
+    }
+
+    #Becoming .Text-Card-Box .Text-Container h6,
+    #Becoming .Utility-Box .Text-Container h6 {
+        font-size: 35px;
+        line-height: 45px;
+    }
+
+    #Becoming .Text-Card-Box .Text-Container .Body-Text {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    #Becoming .Text-Card-Box .Text-Container li {
+        font-size: 15px;
+        line-height: 30px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #Becoming .Header {
+        flex-direction: column;
+    }
+
+    #Becoming .Text-Card-Box .Text-Container h6,
+    #Becoming .Utility-Box .Text-Container h6 {
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    #Becoming .Utility-Box .Text-Container .Body-Text {
+        font-size: 16px;
+        line-height: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #Becoming .Text-Cards>:first-child .Icon-Container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #Becoming .Header .Header-LF h1 {
+        font-size: 30px;
+        line-height: 38px;
+    }
+
+    #Becoming .Text-Cards .Icon-Container img {
+        width: 15%;
+    }
+
+    #Becoming #Image-Text-Box {
+        padding: var(--page-padding);
+        margin: 0;
+        border-radius: 0;
+    }
+
+    #Becoming #Image-Text-Box .Utility-Box .Icon-Container img {
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    #Becoming .Header .Header-LF h1 {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    #Becoming .Header .Header-LF #Body {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    #Becoming .Text-Cards h6 {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    #Becoming .Text-Cards p,
+    #Becoming .Text-Cards li {
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+    #Becoming .Text-Card-Box .Intro-Text {
+        font-size: 12px;
+    }
+
+    #Becoming .Text-Card-Box .Text-Container h6,
+    #Becoming .Utility-Box .Text-Container h6 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    #Becoming .Text-Card-Box .Text-Container .Body-Text {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    #Becoming .Utility-Box .Text-Container .Body-Text {
+        font-size: 14px;
+        line-height: 25px;
+    }
+}
+
+@media screen and (max-width: 150px) {
+
+    #Becoming .Header .Header-LF h1,
+    #Becoming .Text-Cards h6,
+    #Becoming .Text-Card-Box .Text-Container h6,
+    #Becoming .Utility-Box .Text-Container h6,
+    #Becoming .Text-Card-Box .Text-Container .Body-Text {
+        font-size: 8px;
+        line-height: 15px;
+        word-break: break-all;
+    }
+
+    #Becoming .Header .Header-LF #Body,
+    #Becoming .Text-Cards p,
+    #Becoming .Text-Cards li,
+    #Becoming .Text-Card-Box .Intro-Text,
+    #Becoming .Text-Card-Box .Text-Container li,
+    #Becoming .Utility-Box .Text-Container .Body-Text {
+        font-size: 5px;
+        line-height: 12px;
+        word-break: break-all;
+    }
 }

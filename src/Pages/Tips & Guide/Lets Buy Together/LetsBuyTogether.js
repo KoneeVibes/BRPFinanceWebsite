@@ -66,7 +66,7 @@ const LetsBuyTogether = () => {
                 HeadTextIII={'New home, no hassles'}
                 BodyII={'One of the biggest advantages of buying off the plan is time. Unlike traditional property purchases with relatively short windows to round up the total finance, you will have at least 12 months, if not longer, to settle. Savvy buyers will take advantage of this extra time to save their pennies and reduce their borrowings.'}
                 BodyIII={'If you dream of a new home but have nightmares at the thought of building one, an off-the-plan purchase may be the perfect compromise. Although you will not get to design everything as you would with a custom-built home, most off-the-plan developments allow some customisation of finishes and fixtures. Make sure your contract outlines what you can tailor and that you are clear on any additional costs.'}
-                flexDirection={(window.screen.availWidth <= 768) ? 'column-reverse' : 'row-reverse'}
+                flexDirection={(window.screen.availWidth <= 1024) ? 'column-reverse' : 'row-reverse'}
                 UtilityIII={<TextCard Icon={HomeIcon}
                     HeadText={'We do the hard work.'}
                     Body={'We consider a range of options for you. Using our understanding and knowledge of the current market, we look at different loans and quickly narrow it down to the ones that suit your specific needs. Then we choose together.'} />}

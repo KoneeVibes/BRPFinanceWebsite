@@ -79,7 +79,7 @@ const Becoming = () => {
                 gap={(window.screen.availWidth <= 768) ? `var(--flex-gap)` : `calc(2 * var(--flex-gap))`}
                 widthIB={'50%'}
                 widthTCB={'50%'}
-                flexDirection={(window.screen.availWidth <= 768) ? 'column-reverse' : 'row-reverse'}
+                flexDirection={(window.screen.availWidth <= 1024) ? 'column-reverse' : 'row-reverse'}
                 UtilityIII={<TextCard Icon={WorkIcon}
                     HeadText={'We do the hard work.'}
                     Body={'We consider a range of options for you. Using our understanding and knowledge of the current market, we look at different loans and quickly narrow it down to the ones that suit your specific needs. Then we choose together.'} />}
