@@ -27,6 +27,52 @@ const AnimatedHeroWrapper = styled.section`
         height: 100%;
     }
 
+    .slide-right {
+        animation: slide-right 10s linear alternate both infinite;
+        }
+
+        @keyframes slide-right {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(50%);
+            }
+        }
+
+        @keyframes slide-right {
+            from {
+                transform: translateX(50%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+    }
+
+    .slide-left {
+        animation: slide-left 10s linear alternate both infinite;
+        }
+
+        @keyframes slide-left {
+            from {
+                transform: translateX(50%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slide-left {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(50%);
+            }
+        }
+    }
+
     .Left, .Right{
         flex: 10%;
     }
@@ -140,8 +186,8 @@ const AnimatedHero = () => {
         <AnimatedHeroWrapper>
             <div className='Animated-Hero-Container'>
                 <div className='Left'>
-                    <img src={LeftUpper} alt='animatable icon'></img>
-                    <img src={LeftBottom} alt='animatable-icon'></img>
+                    <img src={LeftUpper} className='slide-right' alt='animatable icon'></img>
+                    <img src={LeftBottom} alt='animatable-icon' className='slide-left'></img>
                 </div>
 
                 <div className='Middle'>
@@ -154,8 +200,8 @@ const AnimatedHero = () => {
                 </div>
 
                 <div className='Right'>
-                    <img src={RightTop} alt='animatable-icon'></img>
-                    <img src={RightBottom} alt='animatable-icon'></img>
+                    <img src={RightTop} alt='animatable-icon' className='slide-right'></img>
+                    <img src={RightBottom} alt='animatable-icon' className='slide-left'></img>
                 </div>
             </div>
         </AnimatedHeroWrapper>
