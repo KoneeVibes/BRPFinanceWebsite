@@ -14,6 +14,7 @@ const SendMailWrapper = styled.section`
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url(${background});
+    background-position: center;
     border-radius: 23px;
 
 

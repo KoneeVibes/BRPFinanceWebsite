@@ -22,14 +22,14 @@ const DownloadButtonWrapper = styled.button`
         color: #FFFFFF;
     }
 
-    img{
-        width: 5%;
-    }
-
-    @media screen and (max-width: 693px){
+    @media screen and (max-width: 550px){
         p{
             font-size: 9px;
             line-height: 14px;
+        }
+
+        img:first-child{
+            width: 15%;
         }
     }
 

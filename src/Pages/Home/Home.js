@@ -4,6 +4,7 @@ import Header from '../../Components/Header/Header';
 import ImageTextBox from '../../Components/ImageTextBox/ImageTextBox';
 import NavBar from '../../Components/NavBar/NavBar';
 import HeaderBg from './Assets/HeaderBg.svg';
+import MobileHeaderBg from './Assets/MobileHeaderBg.svg';
 import './Home.css';
 import HeroPhoto from './Assets/HeroPhoto.png';
 import DownloadButton from '../../Components/DownloadButton/DownloadButton';
@@ -26,7 +27,7 @@ const Home = () => {
     return (
         <div id='Home'>
             <NavBar />
-            <Header background={`url(${HeaderBg})`}
+            <Header background={(window.screen.availWidth <= 1280) ? `url(${MobileHeaderBg})` : `url(${HeaderBg})`}
                 height={'47.75em'}
                 widthLF={'45%'}
                 widthRF={'55%'}
@@ -45,13 +46,13 @@ const Home = () => {
                     Button={<DownloadButton ButtonText={'Download Our Guide'} />}
                     widthIB={'55%'}
                     widthTCB={'45%'}
-                    gap={(window.screen.availWidth <= 1440) ? '7em' : '3em'} />
+                    gap={(window.screen.availWidth <= 1440) ? ((window.screen.availWidth <= 1024)? 'var(--sectioning-gap)' : '7em') : '3em'} />
             </div>
             <div className='Contact-Us'>
                 <ImageTextBox src={ContactUs}
                     HeadTextI={'Speak to a Mortgage Broker '}
                     BodyI={'when it comes to buying your first home, it’s a great idea to speak to a mortgage broker first! Heath Brunn is the Managing Director and Founder of BRP finance . He won the VIC/TAS best broker insurance sales  2021/2022 at the AFG Broker Awards. '}
-                    flexDirection={(window.screen.availWidth >= 1440)? 'row-reverse' : 'column-reverse'}
+                    flexDirection={(window.screen.availWidth >= 1440) ? 'row-reverse' : 'column-reverse'}
                     widthIB={'50%'}
                     widthTCB={'50%'}
                     DisplayI={'none'}

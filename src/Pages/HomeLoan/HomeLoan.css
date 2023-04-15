@@ -22,6 +22,7 @@
 
 #HomeLoan .Hero-Tab {
     padding: var(--sectioning-gap);
+    margin: var(--sectioning-gap);
 }
 
 #HomeLoan .Hero-Tab #Image-Text-Box {

@@ -133,6 +133,15 @@
     gap: var(--flex-gap);
 }
 
+#Home .Info-Container .Text-Card:hover {
+    background: #007CB4;
+    color: #FFFFFF;
+}
+
+#Home .Info-Container .Text-Card:hover .Icon-Container img {
+    filter: brightness(0) invert(1);
+}
+
 #Home .Info-Container .Text-Card {
     padding: var(--card-padding);
 }
@@ -182,6 +191,7 @@
     #Home .Header-LF h1,
     #Home .Header-LF h2 {
         font-size: 45px;
+        line-height: 60px;
     }
 
     #Home .Contact-Us .Text-Card h6 {
@@ -286,19 +296,22 @@
         font-size: 30px;
         line-height: 35px;
     }
+
+    #Home .Hero-Tab {
+        margin: 0;
+    }
 }
 
 @media screen and (max-width: 693px) {
-    #Home .Header-LF .Btn-Container button {
-        width: 70%;
-    }
-
     #Home .Info-Container h3 {
         width: 100%;
     }
 }
 
 @media screen and (max-width: 550px) {
+    #Home .Header-LF .Btn-Container button {
+        width: 80%;
+    }
 
     #Home .Header-LF h1,
     #Home .Header-LF h2 {

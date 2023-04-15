@@ -62,6 +62,7 @@ const NewsletterWrapper = styled.section`
         padding-right: 3em;
         background: #007CB4;
         border: none;
+        color: #FFFFFF;
     }
 
     @media screen and (min-width: 1280px) and (max-width: 1543px){
@@ -97,11 +98,6 @@ const NewsletterWrapper = styled.section`
             width: auto;
         }
 
-        form{
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
         p{
             margin: revert;
         }
@@ -110,6 +106,18 @@ const NewsletterWrapper = styled.section`
     @media screen and (max-width: 550px){
         #ck-email, form button{
             font-size: 14px;
+        }
+
+        form button{
+            padding-left: 1.5em;
+            padding-right: 1.5em;
+        }
+    }
+
+    @media screen and (max-width: 300px){
+        form{
+            flex-direction: column;
+            align-items: flex-start;
         }
     }
 
@@ -164,7 +172,7 @@ const Newsletter = () => {
 
     const config = {
         formId: FORM_ID,
-        emailPlaceholder: 'Enter your email address',
+        emailPlaceholder: 'Your email address',
     }
 
     return (

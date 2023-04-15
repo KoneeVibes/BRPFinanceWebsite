@@ -35,9 +35,13 @@ const ImageTextBoxWrapper = styled.section`
         }
     }
 
-    @media screen and (max-width: 1024px){
+    @media screen and (max-width: 1023px){
         .Utility-Box{
             gap: var(--flex-gap);
+        }
+
+        .Text-Card-Box{
+            gap: var(--sectioning-gap);
         }
     }
 
