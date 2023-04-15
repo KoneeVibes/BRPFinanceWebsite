@@ -196,6 +196,12 @@
     }
 }
 
+@media screen and (min-width: 1024px) {
+    #BuyTogether .Header-LF {
+        padding-right: 0;
+    }
+}
+
 @media screen and (max-width: 1024px) {
     #BuyTogether .Header .Header-LF h1 {
         font-size: 40px;
@@ -211,13 +217,13 @@
         font-size: 16px;
         line-height: 29px;
     }
-}
 
-@media screen and (max-width: 768px) {
     #BuyTogether .Header {
         flex-direction: column;
     }
+}
 
+@media screen and (max-width: 768px) {
     #BuyTogether .Text-Cards h6 {
         font-size: 22px;
         line-height: 30px;

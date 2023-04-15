@@ -2,9 +2,10 @@ import React from 'react';
 import Footer from '../../../Components/Footer/Footer';
 import Header from '../../../Components/Header/Header';
 import NavBar from '../../../Components/NavBar/NavBar';
-import HeaderBg from '../Lets Buy Together/Assets/HeaderBg.svg';
+import HeaderBg from '../Refinancing/Assets/HeaderBg.svg';
 import './Research.css';
 import ImageTextBox from '../../../Components/ImageTextBox/ImageTextBox';
+import HeaderPhoto from './Assets/HeaderPhoto.svg';
 import ImageBoxPhoto from './Assets/ImageBoxPhoto.svg';
 import TextCard from '../../../Components/TextCard/TextCard';
 import DepreciationIcon from './Assets/DepreciationIcon.svg';
@@ -24,8 +25,10 @@ const Research = () => {
             <NavBar />
             <Header
                 background={`url(${HeaderBg})`}
-                widthLF={'60%'}
-                widthRF={'40%'}
+                src={`url(${HeaderPhoto})`}
+                srcPosition={(window.screen.availWidth <= 1024) && 'center bottom'}
+                widthLF={(window.screen.availWidth >= 1024) && '60%'}
+                widthRF={(window.screen.availWidth >= 1024) && '40%'}
                 height={'49.75em'}
                 DisplayBtn={'none'}
                 DisplayReview={'none'}
@@ -38,7 +41,7 @@ const Research = () => {
                     DisplayCardIII={'none'}
                     DisplayI={'none'}
                     src={ImageBoxPhoto}
-                    flexDirection={(window.screen.availWidth >= 1024)? 'row-reverse' : 'column'}
+                    flexDirection={(window.screen.availWidth >= 1024) ? 'row-reverse' : 'column'}
                     gap={"var(--flex-gap)"}
                     widthIB={'50%'}
                     widthTCB={'50%'} />
@@ -135,8 +138,8 @@ const Research = () => {
                     displayNine={'none'}
                     displayTen={'none'} />
             </div>
-            <Calendly/>
-            <SendMail/>
+            <Calendly />
+            <SendMail />
             <Footer />
         </div>
     )

@@ -5,6 +5,7 @@ import Header from '../../../Components/Header/Header';
 import NavBar from '../../../Components/NavBar/NavBar';
 import TextCard from '../../../Components/TextCard/TextCard';
 import HeaderBg from './Assets/HeaderBg.svg';
+import HeaderPhoto from './Assets/HeaderPhoto.svg';
 import './LetsBuyTogether.css';
 import ImageTextPhoto from './Assets/ImageTextPhoto.svg';
 import HomeIcon from './Assets/HomeIcon.svg';
@@ -23,10 +24,12 @@ const LetsBuyTogether = () => {
             <NavBar />
             <Header
                 background={`url(${HeaderBg})`}
+                src={`url(${HeaderPhoto})`}
+                srcPosition={(window.screen.availWidth <= 1024) && 'center bottom'}
+                widthLF={(window.screen.availWidth >= 1024) && '50%'}
+                widthRF={(window.screen.availWidth >= 1024) && '50%'}
                 HeaderTextI={'Let’s buy a home together.'}
                 Body={'It’s a big decision, so it’s good to have someone there to help you make the right one.'}
-                widthLF={'50%'}
-                widthRF={'50%'}
                 DisplayBtn={'none'}
                 DisplayReview={'none'}
                 height={"48.25em"} />
@@ -98,7 +101,7 @@ const LetsBuyTogether = () => {
                     displayTen={'none'}
                 />
             </div>
-            <Calendly/>
+            <Calendly />
             <div className='SendMail-Box'>
                 <SendMail />
             </div>

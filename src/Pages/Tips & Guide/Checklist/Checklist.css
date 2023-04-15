@@ -3,6 +3,10 @@
     justify-content: center;
 }
 
+#Checklist .Header .Header-RF{
+    display: none;
+}
+
 #Checklist .Header .Header-LF h1 {
     font-family: 'Montserrat';
     font-size: 65px;

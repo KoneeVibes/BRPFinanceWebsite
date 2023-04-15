@@ -8,14 +8,25 @@ const HeaderWrapper = styled.section`
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
-    padding: var(--page-padding);
     padding-top: 4em;
     align-items: center;
     justify-content: 'flex-start';
+
+    .Header-LF{
+        padding: var(--page-padding);
+    }
+
+    .Header-RF{
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-size: contain;
+    }
 `
 
-const Header = ({ background, height, widthLF, widthRF, HeaderTextI, HeaderTextII, Body, gap, BtnTxt, DisplayBtn, DisplayReview, src }) => {
-    
+const Header = ({ background, height, widthLF, widthRF, HeaderTextI, HeaderTextII, Body, gap, BtnTxt, DisplayBtn, DisplayReview, src, srcPosition }) => {
+
     return (
         <HeaderWrapper className='Header' style={{ backgroundImage: background, height: height, gap: gap }}>
             <div className='Header-LF' style={{ flex: widthLF }}>
@@ -29,8 +40,7 @@ const Header = ({ background, height, widthLF, widthRF, HeaderTextI, HeaderTextI
                     <StarReview />
                 </div>
             </div>
-            <div className='Header-RF' style={{ flex: widthRF }}>
-                {/* <img src={src} alt='Header Side Img'></img> */}
+            <div className='Header-RF' style={{ flex: widthRF, backgroundImage: src, backgroundPosition: srcPosition }}>
             </div>
         </HeaderWrapper>
     )

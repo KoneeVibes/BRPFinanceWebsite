@@ -20,14 +20,15 @@ const Becoming = () => {
             <NavBar />
             <Header
                 background={`url(${HeaderBg})`}
+                src={`url(${HeaderPhoto})`}
+                srcPosition={(window.screen.availWidth <= 1024) && 'center bottom'}
+                widthLF={(window.screen.availWidth >= 1024) && '50%'}
+                widthRF={(window.screen.availWidth >= 1024) && '50%'}
                 height={"48.25em"}
                 DisplayBtn={'none'}
                 DisplayReview={'none'}
                 HeaderTextI={"Becoming a first home buyer"}
-                Body={"Buying your first home is an exciting, but big step to take and one that comes with many questions and decisions. The first big question is how much you can borrow and what your likely repayments will be."}
-                widthLF={'50%'}
-                widthRF={'50%'}
-                src={HeaderPhoto} />
+                Body={"Buying your first home is an exciting, but big step to take and one that comes with many questions and decisions. The first big question is how much you can borrow and what your likely repayments will be."} />
             <div className='Text-Cards'>
                 <TextCard
                     Icon={Inquiry}

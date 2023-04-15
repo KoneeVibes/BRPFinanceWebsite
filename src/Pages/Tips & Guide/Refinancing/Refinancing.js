@@ -3,7 +3,9 @@ import Footer from '../../../Components/Footer/Footer';
 import Header from '../../../Components/Header/Header';
 import NavBar from '../../../Components/NavBar/NavBar';
 import './Refinancing.css';
-import HeaderBg from '../Lets Buy Together/Assets/HeaderBg.svg';
+import HeaderBg from './Assets/HeaderBg.svg';
+import MobileHeaderBg from './Assets/MobileHeaderBg.svg';
+import HeaderPhoto from './Assets/HeaderPhoto.svg';
 import ImageBoxPhoto from './Assets/ImageBoxPhoto.svg';
 import ImageTextBox from '../../../Components/ImageTextBox/ImageTextBox';
 import TextCard from '../../../Components/TextCard/TextCard';
@@ -15,7 +17,9 @@ const Refinancing = () => {
         <div id='Refinancing'>
             <NavBar />
             <Header
-                background={`url(${HeaderBg})`}
+                background={(window.screen.availWidth <= 500) ? `url(${MobileHeaderBg})` : `url(${HeaderBg})`}
+                src={`url(${HeaderPhoto})`}
+                srcPosition={(window.screen.availWidth <= 500) && 'right top'}
                 height={"48.375em"}
                 DisplayBtn={'none'}
                 DisplayReview={'none'}
@@ -30,7 +34,7 @@ const Refinancing = () => {
                     DisplayCardIII={'none'}
                     DisplayI={'none'}
                     src={ImageBoxPhoto}
-                    flexDirection={(window.screen.availWidth > 768)? 'row-reverse' : 'column-reverse'}
+                    flexDirection={(window.screen.availWidth > 768) ? 'row-reverse' : 'column-reverse'}
                     gap={"var(--flex-gap)"}
                     widthIB={'50%'}
                     widthTCB={'50%'} />

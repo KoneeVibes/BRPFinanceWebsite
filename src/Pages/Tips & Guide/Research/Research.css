@@ -139,6 +139,12 @@
     }
 }
 
+@media screen and (min-width: 1024px) {
+    #Research .Header-LF {
+        padding-right: 0;
+    }
+}
+
 @media screen and (max-width: 1024px) {
     #Research .Header .Header-LF h1 {
         font-size: 30px;
@@ -171,13 +177,13 @@
     #Research .Top-Tips .Flex-Box {
         flex-direction: column-reverse;
     }
-}
 
-@media screen and (max-width: 768px) {
     #Research .Header {
         flex-direction: column;
     }
+}
 
+@media screen and (max-width: 768px) {
     #Research .ImageBox-Container .Flex-Box {
         padding: var(--card-padding);
     }
