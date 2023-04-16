@@ -27,6 +27,10 @@ const StarReviewWrapper = styled.section`
       }
     }
 
+    @media screen and (max-width: 500px){
+      padding: 0;
+    }
+
     @media screen and (max-width: 426px){
       .Text-Box p{
         font-size: 14px;

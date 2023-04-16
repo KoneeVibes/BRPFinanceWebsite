@@ -29,19 +29,19 @@ const NavBarWrapper = styled.nav`
     }
 
    .Links-Container ul li{
-    position: relative;
-    float: left;
+        position: relative;
+        float: left;
    }
 
    .Links-Container ul li a{
-    font-family: Montserrat;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 20px;
-    letter-spacing: 0em;
-    padding: 0 1.4em;
-    text-decoration: none;
-    color: #000000;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0em;
+        padding: 0 1.4em;
+        text-decoration: none;
+        color: #000000;
    }
 
    .Links-Container ul li a:hover{
@@ -51,42 +51,40 @@ const NavBarWrapper = styled.nav`
    }
 
    #Drop-Down li a{
-    padding:0;
+        padding:0;
    }
 
    #Drop-Down li{
-    padding: 1.5em;
+        padding: 1.5em;
    }
 
    ul li ul{
-    position: absolute;
-    left: 0;
-    width: 270px;
-    background: #FFFFFF;
-    display: none;
-    padding-top: 1.3em;
+        position: absolute;
+        left: 0;
+        width: 270px;
+        background: #FFFFFF;
+        display: none;
+        padding-top: 1.3em;
    }
 
    ul li ul li{
-    border-top: 1px solid rgba(0, 0, 0, .1);
+        border-top: 1px solid rgba(0, 0, 0, .1);
    }
 
    .Links-Container ul li:focus-within > ul,
    .Links-Container ul li:hover > ul{
-    display: block;
+        display: block;
    }
-
    #hamburger{
-    display: none;
+        display: none;
    }
 
    label{
-    font-size: 20px;
-    color: #333;
-    cursor: pointer;
-    display: none;
+        font-size: 20px;
+        color: #333;
+        cursor: pointer;
+        display: none;
    }
-
    .bar{
         display: block;
         width: 25px;
@@ -107,7 +105,6 @@ const NavBarWrapper = styled.nav`
     label{
         display: initial;
     }
-
     .Links-Container{
         position: absolute;
         top: 100%;
@@ -118,55 +115,44 @@ const NavBarWrapper = styled.nav`
         padding: var(--page-padding);
         height: max-content;
     }
-
     .Hide{
         display: none;
     }
-
     label.active .bar:nth-child(2){
         opacity: 0;
     }
-
     label.active .bar:nth-child(1){
         transform: translateY(8px) rotate(45deg);
     }
-
     label.active .bar:nth-child(3){
         transform: translateY(-8px) rotate(-45deg);
     }
-
     .Links-Container ul li{
         width: 100%;
         padding: 0.5em 0;
         border-top: 1px solid rgba(0, 0, 0, .1);
     }
-
     #Drop-Down li{
         width: fill-available;
     }
-
     .Links-Container ul li a{
         padding: 0;
     }
-
     .Links-Container ul li ul{
         position: relative;
         width: 100%;
     }
-
     .Links-Container ul li ul li{
         background: #eeeeee;
     }
-
     #hamburger:not(:checked) ~ .Links-Container{
         display: none;
     }
-
     #Drop-Down li{
         padding: 0.5em;
     }
    }
-
+   
    @media (max-width: 768px){
     .Logo-Container img{
         width: 50%;

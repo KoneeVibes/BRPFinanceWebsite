@@ -228,6 +228,10 @@
         line-height: 41px;
     }
 
+    #About .Header {
+        align-items: stretch;
+    }
+
     #About .Header-LF #Body {
         font-size: 14px;
         line-height: 23px;

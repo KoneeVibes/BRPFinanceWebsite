@@ -15,7 +15,7 @@ import HouseIcon from './Assets/HouseIcon.svg';
 import InvestmentIcon from './Assets/InvestmentIcon.svg';
 import LocationIcon from './Assets/LocationIcon.svg';
 import OwnershipIcon from './Assets/OwnershipIcon.svg';
-import TopTips from '../Lets Buy Together/Assets/TopTips.svg';
+import TopTips from './Assets/TopTips.svg';
 import Calendly from '../../../Components/Calendly/Calendly';
 import SendMail from '../../../Components/SendMail/SendMail';
 

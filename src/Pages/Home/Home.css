@@ -313,6 +313,10 @@
         width: 80%;
     }
 
+    #Home .Header{
+        align-items: stretch;
+    }
+
     #Home .Header-LF h1,
     #Home .Header-LF h2 {
         font-size: 30px;
@@ -324,9 +328,9 @@
         line-height: 23px;
     }
 
-    #Home .Header-LF .Btn-Container {
+    /* #Home .Header-LF .Btn-Container {
         padding-top: calc(2.5 * var(--flex-gap));
-    }
+    } */
 
     #Home .Hero-Tab .Text-Card h6 {
         font-size: 18px;
@@ -391,9 +395,9 @@
         line-height: 20px;
     }
 
-    #Home .Header-LF .Btn-Container {
+    /* #Home .Header-LF .Btn-Container {
         padding-top: var(--flex-gap);
-    }
+    } */
 
     #Home .Hero-Tab .Text-Card h6 {
         font-size: 14px;
