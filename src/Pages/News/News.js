@@ -9,6 +9,7 @@ import ThumbNailOne from './Assets/ThumbnailOne.svg';
 import ThumbNailTwo from './Assets/ThumbnailTwo.svg';
 import ThumbNailThree from './Assets/ThumbnailThree.svg';
 import ThumbNailFour from './Assets/ThumbnailFour.svg';
+import { DailyNews } from '../../Utils/DailyNews';
 
 const News = () => {
   return (
@@ -25,6 +26,7 @@ const News = () => {
       <div className='News-Section'>
         <h3>News</h3>
         <div className='NewsTabs'>
+          <DailyNews/>
           <NewsTab
             src={ThumbNailOne}
             NewsTitle={'A Hamptons-style home that ticks every box'}

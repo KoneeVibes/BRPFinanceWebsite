@@ -55,7 +55,7 @@ const NavBarWrapper = styled.nav`
    }
 
    #Drop-Down li{
-        padding: 1.5em;
+        padding: 1em;
    }
 
    ul li ul{
@@ -65,10 +65,11 @@ const NavBarWrapper = styled.nav`
         background: #FFFFFF;
         display: none;
         padding-top: 1.3em;
+        border-radius: 20px;
    }
 
    ul li ul li{
-        border-top: 1px solid rgba(0, 0, 0, .1);
+        // border-top: 1px solid rgba(0, 0, 0, .1);
    }
 
    .Links-Container ul li:focus-within > ul,
@@ -152,7 +153,7 @@ const NavBarWrapper = styled.nav`
         padding: 0.5em;
     }
    }
-   
+
    @media (max-width: 768px){
     .Logo-Container img{
         width: 50%;
@@ -202,19 +203,19 @@ const NavBar = () => {
                                     home buyer</Link>
                             </li>
                             <li>
-                                <Link to={"/Tips & Guide/Let’s buy a home together."}>Let’s buy a home
-                                    together.</Link>
+                                <Link to={"/Tips & Guide/Let’s buy a home together"}>Let’s buy a home
+                                    together</Link>
                             </li>
                             <li>
-                                <Link to={"/Tips & Guide/Research and having the right people to help you are the keys when investing in property."}>Research and having the right people to help you are the keys when investing in property.</Link>
+                                <Link to={"/Tips & Guide/Investing in property"}>Investing in property</Link>
                             </li>
                             <li>
-                                <Link to={"/Tips & Guide/Refinancing your homeloan."}>Refinancing
+                                <Link to={"/Tips & Guide/Refinancing your homeloan"}>Refinancing
                                     your home
-                                    loan.</Link>
+                                    loan</Link>
                             </li>
                             <li>
-                                <Link to={"/Tips & Guide/Here’s a checklist of required documents"}>Here’s a checklist of required documents</Link>
+                                <Link to={"/Tips & Guide/Required documents"}>Required documents</Link>
                             </li>
                         </ul>
                     </li>

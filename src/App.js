@@ -10,7 +10,7 @@ import LetsBuyTogether from './Pages/Tips & Guide/Lets Buy Together/LetsBuyToget
 import Research from './Pages/Tips & Guide/Research/Research';
 import Refinancing from './Pages/Tips & Guide/Refinancing/Refinancing';
 import Checklist from './Pages/Tips & Guide/Checklist/Checklist';
-import ScrollToTop from './ScrollToTop';
+import ScrollToTop from './Utils/ScrollToTop';
 
 function App() {
   return (
