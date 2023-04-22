@@ -1,92 +1,53 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { HashLink } from 'react-router-hash-link';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Logo from './Assets/Logo.svg';
+import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
+import Twitter from '../Footer/Assets/TwitterIcon.svg';
+import LinkedIn from '../Footer/Assets/LinkedInIcon.svg';
+import Messenger from '../Footer/Assets/MessengerIcon.svg';
+import Instagram from '../Footer/Assets/UnknownIcon.svg';
 
-const NavBarWrapper = styled.nav`
-   position: sticky;
-   top: 0;
-   left: 0;
-   right: 0;
-   background: #FFFFFF;
-   box-shadow: 0 5 10px rgba(0, 0, 0, .1);
-   padding: var(--page-padding);
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   z-index: 1000;
-   min-height: var(--nav-height);
 
-   .Links-Container ul{
-    list-style: none; 
-    padding-inline-start: 0;
-    margin:0;
-   }
+const NavbarWrapper = styled.nav`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: var(--nav-height);
+    padding: var(--page-padding);
 
-   .Links-Container ul li:nth-child(1){
-        border-top: none;
+    ul{
+        display: flex;
+        gap: 1em;
+        align-items: center;
+        list-style-type: none;
+        cursor: pointer;
+        padding: 0;
     }
 
-   .Links-Container ul li{
-        position: relative;
-        float: left;
-   }
-
-   .Links-Container ul li a{
+    li{
         font-family: Montserrat;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 20px;
-        letter-spacing: 0em;
-        padding: 0 1.4em;
+        font-size: 25px;
+        font-weight: 500;
+        line-height: 36px;
+        padding: 0 1em;
+    }
+
+    a{
         text-decoration: none;
         color: #000000;
-   }
+    }
 
-   .Links-Container ul li a:hover{
-    // font-styling
-    background: 
-    color: 
-   }
+    .logo{
+        width: 100%;
+    }
 
-   #Drop-Down li a{
-        padding:0;
-   }
-
-   #Drop-Down li{
-        padding: 1em;
-   }
-
-   ul li ul{
-        position: absolute;
-        left: 0;
-        width: 270px;
-        background: #FFFFFF;
+    .hamburger{
         display: none;
-        padding-top: 1.3em;
-        border-radius: 20px;
-   }
-
-   ul li ul li{
-        // border-top: 1px solid rgba(0, 0, 0, .1);
-   }
-
-   .Links-Container ul li:focus-within > ul,
-   .Links-Container ul li:hover > ul{
-        display: block;
-   }
-   #hamburger{
-        display: none;
-   }
-
-   label{
-        font-size: 20px;
-        color: #333;
         cursor: pointer;
-        display: none;
-   }
-   .bar{
+    }
+
+    .bar{
         display: block;
         width: 25px;
         height: 3px;
@@ -96,139 +57,235 @@ const NavBarWrapper = styled.nav`
         background-color: #000000;
     }
 
-    @media (max-width: 1280px){
-    .Logo-Container img{
-        width: 70%;
-    }
-   }
-
-   @media (max-width: 1024px){
-    label{
-        display: initial;
-    }
-    .Links-Container{
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: #FFFFFF;
-        border-top: 1px solid rgba(0, 0, 0, .1);
-        padding: var(--page-padding);
-        height: max-content;
-    }
-    .Hide{
+    .Nav-Footer{
         display: none;
     }
-    label.active .bar:nth-child(2){
-        opacity: 0;
-    }
-    label.active .bar:nth-child(1){
-        transform: translateY(8px) rotate(45deg);
-    }
-    label.active .bar:nth-child(3){
-        transform: translateY(-8px) rotate(-45deg);
-    }
-    .Links-Container ul li{
-        width: 100%;
-        padding: 0.5em 0;
-        border-top: 1px solid rgba(0, 0, 0, .1);
-    }
-    #Drop-Down li{
-        width: fill-available;
-    }
-    .Links-Container ul li a{
-        padding: 0;
-    }
-    .Links-Container ul li ul{
-        position: relative;
-        width: 100%;
-    }
-    .Links-Container ul li ul li{
-        background: #eeeeee;
-    }
-    #hamburger:not(:checked) ~ .Links-Container{
-        display: none;
-    }
-    #Drop-Down li{
-        padding: 0.5em;
-    }
-   }
 
-   @media (max-width: 768px){
-    .Logo-Container img{
-        width: 50%;
+    .Nav-Footer p{
+        font-family: Montserrat;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 26px;
+        letter-spacing: -0.02em;
     }
-   }
+
+    .Nav-Footer{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        position: fixed;
+        bottom: 0;
+    }
+
+    .Nav-Footer .SM-Icons{
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        margin: auto;
+    }
+
+    @media screen and (max-width: 1200px){
+        .logo{
+            width: 70%;
+        }
+    }
+
+    @media screen and (max-width: 1727px){
+        li{
+            font-size: 20px;
+        }
+    }
+
+    @media screen and (max-width: 1240px){
+        li{
+            font-size: 16px;
+        }
+    }
+
+    @media screen and (min-width: 1025px) and (max-width: 1090px){
+        li{
+            padding: 0 .75em;
+        }
+    }
+
+    @media screen and (min-width: 1025px){
+        li:last-child{
+            padding-right: 0;
+        }
+    }
+
+    @media screen and (max-width: 1024px){
+        .hamburger{
+            display: block;     
+        }
+
+        .hamburger.active .bar:nth-child(2){
+            opacity: 0;
+        }
+
+        .hamburger.active .bar:nth-child(1){
+            transform: translateY(8px) rotate(45deg);
+        }
+
+        .hamburger.active .bar:nth-child(3){
+            transform: translateY(-8px) rotate(-45deg);
+        }
+
+        ul{
+            position: fixed;
+            left: -150%;
+            top: var(--nav-height);
+            gap: 50px;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            background: #FFFFFF;
+            flex-direction: column;
+            text-align: center;
+            transition: 0.3;
+            color: #000000;
+            padding-top: 3em;
+        }
+
+        ul.active{
+            left: 0;
+        }
+
+        li{
+            font-family: Montserrat;
+            font-size: 21px;
+            font-weight: 600;
+            line-height: 22px;
+        }
+    }
+
+    @media screen and (max-width: 500px){
+        ul{
+            align-items: stretch;
+            text-align: left;
+            padding: var(--page-padding);
+            padding-top: 3em;
+        }
+
+        li{
+            padding: 0;
+        }
+
+        .Nav-Footer .SM-Icons{
+            margin: 0;
+        }
+    }
+
+    @media screen and (max-width: 360px){
+        li{
+            font-size: 16px;
+        }
+
+        .SM-Icons img {
+            width: 70%;
+        }
+
+        .Nav-Footer .SM-Icons{
+            gap: .2em;
+        }
+    }
+
+    @media screen and (max-width: 150px){
+        li{
+            font-size: 12px;
+            word-wrap: break-word;
+        }
+
+        ul{
+            gap: 1em;
+            padding-top: 0;
+        }
+
+        .Nav-Footer .SM-Icons{
+            gap: 0em;
+            flex-wrap: wrap;
+        }
+
+        .Nav-Footer p{
+            word-break: break-all;
+        }
+    }
+
 `
 
-const NavBar = () => {
+const Navbar = () => {
 
-    const [isClicked, setisClicked] = useState(false);
+    const [isActive, setisActive] = useState(false);
 
-    const handleClick = () => {
-        setisClicked(!isClicked);
+    const toggleClass = () => {
+        setisActive(!isActive);
+        if (isActive) {
+            document.body.style.overflowY = 'visible';
+        } else {
+            document.body.style.overflowY = 'hidden';
+        }
     }
 
+    useEffect(() => {
+
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('ul');
+
+        function resetToDefault() {
+            if (window.screen.availWidth >= 1024) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                document.body.style.overflowY = 'visible';
+            }
+        }
+
+        window.addEventListener('resize', resetToDefault);
+    }, [isActive])
+
+
     return (
-        <NavBarWrapper>
-            <div className='Logo-Container'>
-                <Link href='/'>
-                    <img src={Logo} alt=
-                        {'Logo'}></img>
-                </Link>
+        <NavbarWrapper>
+            <Link href='/'>
+                <img src={Logo} className='logo' alt=
+                    {'Logo'}></img>
+            </Link>
+            <ul className={isActive ? "active" : null}>
+                <li>
+                    <Link to={'/'}>Home</Link>
+                </li>
+                <li>
+                    <Link to={'/about'}>About</Link>
+                </li>
+                <li>
+                    <Link to={'/homeloan'}
+                    >Home Loan</Link>
+                </li>
+                <li id='Drop-Down-Li'>
+                    <Link>Tips & Guide</Link>
+                </li>
+                <li>
+                    <Link to={'/news'}>News</Link>
+                </li>
+                <li>
+                    <HashLink to='#Footer' smooth>Contact</HashLink>
+                </li>
+                <div className='Nav-Footer'>
+                    <div className='SM-Icons'>
+                        <Link><img src={LinkedIn} alt='LinkedIn Icon'></img></Link>
+                        <Link><img src={Messenger} alt='Messenger Icon'></img></Link>
+                        <Link><img src={Twitter} alt='Twitter Icon'></img></Link>
+                        <Link><img src={Instagram} alt='Instagram Icon'></img></Link>
+                    </div>
+                    <p>Copyright @ Lemon Designs 2023. All Rights Reserved.</p>
+                </div>
+            </ul>
+            <div className={isActive ? "hamburger active" : "hamburger"} onClick={toggleClass}>
+                <span className='bar'></span>
+                <span className='bar'></span>
+                <span className='bar'></span>
             </div>
-            <input type={'checkbox'} id='hamburger'></input>
-            <label htmlFor='hamburger' onClick={handleClick} className={isClicked ? 'active' : 'not-active'}>
-                <span className='bar'></span>
-                <span className='bar'></span>
-                <span className='bar'></span>
-            </label>
-            <div className={isClicked || window.screen.availWidth >= 1024 ? 'Links-Container' : 'Hide'}>
-                <ul className='links'>
-                    <li>
-                        <Link to={'/'}>Home</Link>
-                    </li>
-                    <li>
-                        <Link to={'/about'}>About</Link>
-                    </li>
-                    <li>
-                        <Link to={'/homeloan'}
-                        >Home Loan</Link>
-                    </li>
-                    <li id='Drop-Down-Li'>
-                        <Link>Tips & Guide +</Link>
-                        <ul id='Drop-Down'>
-                            <li>
-                                <Link to={"/Tips & Guide/Becoming a first home buyer"}>Becoming a first
-                                    home buyer</Link>
-                            </li>
-                            <li>
-                                <Link to={"/Tips & Guide/Let’s buy a home together"}>Let’s buy a home
-                                    together</Link>
-                            </li>
-                            <li>
-                                <Link to={"/Tips & Guide/Investing in property"}>Investing in property</Link>
-                            </li>
-                            <li>
-                                <Link to={"/Tips & Guide/Refinancing your homeloan"}>Refinancing
-                                    your home
-                                    loan</Link>
-                            </li>
-                            <li>
-                                <Link to={"/Tips & Guide/Required documents"}>Required documents</Link>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <Link to={'/news'}>News</Link>
-                    </li>
-                    <li>
-                        <HashLink to='#Footer' smooth>Contact</HashLink>
-                    </li>
-                </ul>
-            </div>
-        </NavBarWrapper>
+        </NavbarWrapper>
     )
 }
 
-export default NavBar
+export default Navbar
