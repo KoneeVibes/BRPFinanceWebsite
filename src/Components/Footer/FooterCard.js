@@ -111,14 +111,14 @@ const FooterCardWrapper = styled.section`
     }
 `
 
-const FooterCard = ({ HeadText, TextOne, TextTwo, TextThree, TextFour, display }) => {
+const FooterCard = ({ HeadText, TextOne, TextTwo, TextThree, TextFour, display, urlOne, urlTwo, urlThree, urlFour, targetOne, targetTwo, targetThree, targetFour }) => {
     return (
         <FooterCardWrapper>
             <h5>{HeadText}</h5>
-            <Link><p>{TextOne}</p></Link>
-            <Link><p>{TextTwo}</p></Link>
-            <Link><p>{TextThree}</p></Link>
-            <Link><p>{TextFour}</p></Link>
+            <a href={urlOne} target={targetOne} rel="noopener noreferrer external" ><p>{TextOne}</p></a>
+            <a href={urlTwo} target={targetTwo} rel="noopener noreferrer external" ><p>{TextTwo}</p></a>
+            <a href={urlThree} target={targetThree} rel="noopener noreferrer external" ><p>{TextThree}</p></a>
+            <a href={urlFour} target={targetFour} rel="noopener noreferrer external" ><p>{TextFour}</p></a>
             <div className='SM-Icons' style={{ display: display }}>
                 <Link><img src={LinkedIn} alt='LinkedIn Icon'></img></Link>
                 <Link><img src={Messenger} alt='Messenger Icon'></img></Link>

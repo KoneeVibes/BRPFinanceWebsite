@@ -141,17 +141,18 @@ export const LiveNews = () => {
     const navigate = useNavigate();
     const [News, setNews] = useState([]);
     const articles = News.articles;
+    const NEWS = process.env.REACT_APP_NEWS;
 
     useEffect(() => {
         const fetchNews = async () => {
             const response = await fetch(
-                'https://newsapi.org/v2/everything?q=australia&apiKey=14e351c3a94343bd916bbc36bc8560ed'
+                `https://newsapi.org/v2/everything?q=australia&apiKey=${NEWS}`
             );
             const data = await response.json();
             setNews(data);
         };
         fetchNews();
-    }, []);
+    }, [NEWS]);
 
     return (
         <div className='NewsTabs' style={{ display: 'flex', flexDirection: 'column', gap: 'var(--sectioning-gap)' }}>

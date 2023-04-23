@@ -1,7 +1,6 @@
 import React from 'react';
 import Footer from '../../../Components/Footer/Footer';
 import Header from '../../../Components/Header/Header';
-// import ImageTextBox from './Assets/ImageTextPhoto.svg';
 import NavBar from '../../../Components/NavBar/NavBar';
 import TextCard from '../../../Components/TextCard/TextCard';
 import HeaderBg from './Assets/HeaderBg.svg';

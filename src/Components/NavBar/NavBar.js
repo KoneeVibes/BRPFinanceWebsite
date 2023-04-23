@@ -18,7 +18,7 @@ const NavbarWrapper = styled.nav`
 
     ul{
         display: flex;
-        gap: 1em;
+        gap: 3em;
         align-items: center;
         list-style-type: none;
         cursor: pointer;
@@ -259,9 +259,6 @@ const Navbar = () => {
                 <li>
                     <Link to={'/homeloan'}
                     >Home Loan</Link>
-                </li>
-                <li id='Drop-Down-Li'>
-                    <Link>Tips & Guide</Link>
                 </li>
                 <li>
                     <Link to={'/news'}>News</Link>

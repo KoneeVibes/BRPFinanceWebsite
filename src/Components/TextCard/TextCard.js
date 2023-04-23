@@ -9,7 +9,6 @@ const TextCardWrapper = styled.div`
     ul{
         list-style-position: inside;
         padding-inline-start: 0;
-        // display: none;
     }
 
     .Text-Container ul h6{

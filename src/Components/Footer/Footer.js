@@ -63,18 +63,31 @@ const Footer = () => {
           TextOne={'Becoming a first home buyer'}
           TextTwo={'Buying a Home'}
           TextThree={'Investing in Property'}
-          TextFour={'Refinancing your home loan'} />
+          TextFour={'Refinancing your home loan'}
+          urlOne={'https://www.brpfinance.com.au/home-loans/becoming-a-first-home-buyer/'}
+          urlTwo={'https://www.brpfinance.com.au/home-loans/buying-a-home/'}
+          urlThree={'https://www.brpfinance.com.au/home-loans/investing-in-property/'}
+          urlFour={'https://www.brpfinance.com.au/home-loans/refinancing-your-home-loan/'}
+          targetOne={'_blank'}
+          targetTwo={'_blank'}
+          targetThree={'_blank'}
+          targetFour={'_blank'} />
         <FooterCard HeadText={'GUIDES'}
           TextOne={'About Us'}
           TextTwo={'Careers'}
-          TextThree={'Blog'}
+          TextThree={'Tips & Guide'}
           TextFour={'Pricing'}
+          urlOne={'/about'}
+          urlThree={'https://www.brpfinance.com.au/'}
+          targetThree={'_blank'}
           display={'none'} />
         <FooterCard HeadText={'TOOLS'}
           TextOne={'Proposal Template'}
           TextTwo={'Invoice Template'}
-          TextThree={'Tuturoial'}
-          TextFour={'How to write a contract'}
+          TextThree={'Tutorial'}
+          TextFour={'Calculator'}
+          urlFour={'https://www.brpfinance.com.au/calculators/'}
+          targetFour={'_blank'}
           display={'none'} />
         <Newsletter />
       </div>
