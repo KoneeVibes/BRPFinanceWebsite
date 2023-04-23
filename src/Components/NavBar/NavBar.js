@@ -69,14 +69,6 @@ const NavbarWrapper = styled.nav`
         letter-spacing: -0.02em;
     }
 
-    .Nav-Footer{
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        position: fixed;
-        bottom: 0;
-    }
-
     .Nav-Footer .SM-Icons{
         display: flex;
         align-items: center;
@@ -156,6 +148,14 @@ const NavbarWrapper = styled.nav`
             font-size: 21px;
             font-weight: 600;
             line-height: 22px;
+        }
+
+        .Nav-Footer{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            position: fixed;
+            bottom: 0;
         }
     }
 

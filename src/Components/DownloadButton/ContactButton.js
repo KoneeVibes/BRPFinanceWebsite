@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import ArrowRight from './Assets/ArrowRightII.svg'
+import { useNavigate } from 'react-router-dom';
 
 const ContactButtonWrapper = styled.button`
     display: flex;
@@ -48,11 +49,24 @@ const ContactButtonWrapper = styled.button`
         line-height: 13px;
       }
     }
+
+    @media screen and (max-width: 150px){
+      p{
+        font-size: 5px;
+        line-height: 10px;
+        word-break: break-all;
+      }
+    }
 `
 
-const ContactButton = ({ButtonText, Background, Type, Width, Display, BorderRadius, BoxShadow, Padding}) => {
+const ContactButton = ({ButtonText, Background, Type, Width, Display, BorderRadius, BoxShadow, Padding, url}) => {
+
+  const navigate = useNavigate();
+
   return (
-    <ContactButtonWrapper type={Type} style={{background: Background, width: Width, borderRadius: BorderRadius, boxShadow: BoxShadow, padding: Padding}}>
+    <ContactButtonWrapper type={Type} style={{background: Background, width: Width, borderRadius: BorderRadius, boxShadow: BoxShadow, padding: Padding}} onClick={() => {
+      navigate(url)
+    }} >
         <p id='Button-Text'>{ButtonText}</p>
         <img src={ArrowRight} alt='Arrow Right Icon' style={{display: Display}}></img>
     </ContactButtonWrapper>

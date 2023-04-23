@@ -4,7 +4,7 @@ import Home from './Pages/Home/Home';
 import About from './Pages/About/About';
 import HomeLoan from './Pages/HomeLoan/HomeLoan';
 import News from './Pages/News/News';
-import NewsI from './Pages/News/NewsI.js';
+import NewsPiece from './Pages/News/NewsPiece.js';
 import Becoming from './Pages/Tips & Guide/Becoming a Buyer/Becoming';
 import LetsBuyTogether from './Pages/Tips & Guide/Lets Buy Together/LetsBuyTogether';
 import Research from './Pages/Tips & Guide/Research/Research';
@@ -22,7 +22,7 @@ function App() {
             <Route path='/about' element={<About />}></Route>
             <Route path='/homeloan' element={<HomeLoan />}></Route>
             <Route path='/news' element={<News />}></Route>
-            <Route path='/news/pawleena church proving popular with buyers' element={<NewsI />}></Route>
+            <Route path='/news/:id' element={<NewsPiece />}></Route>
             <Route path='/Tips & Guide/Becoming a first home buyer' element={<Becoming />}></Route>
             <Route path='/Tips & Guide/Let’s buy a home together' element={<LetsBuyTogether />}></Route>
             <Route path='/Tips & Guide/Investing in property' element={<Research />}></Route>

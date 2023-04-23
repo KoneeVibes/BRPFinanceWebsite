@@ -1,5 +1,7 @@
+import moment from 'moment';
 import React from 'react';
 import styled from 'styled-components';
+import ContactButton from '../DownloadButton/ContactButton';
 
 const NewsContainerWrapper = styled.div`
     margin: var(--page-padding);
@@ -11,10 +13,19 @@ const NewsContainerWrapper = styled.div`
 
     img{
         width: 100%;
+        border-radius: 15px;
     }
 
     .Image-Container{
         padding: var(--sectioning-gap);
+    }
+
+    .Button-Container{
+        padding: var(--sectioning-gap);
+    }
+
+    a{
+        text-decoration: none;
     }
 
     h4{
@@ -25,12 +36,16 @@ const NewsContainerWrapper = styled.div`
         letter-spacing: 0em;
     }
 
-    p{
+    .News-Content{
         font-family: Montserrat;
         font-size: 18px;
         font-weight: 500;
         line-height: 33px;
         letter-spacing: -0.02em;
+    }
+
+    #Button-Text{
+        color: #FFFFFF;
     }
 
     @media screen and (max-width: 1024px){
@@ -39,7 +54,7 @@ const NewsContainerWrapper = styled.div`
             line-height: 36px;
         }
 
-        p{
+        .News-Content{
             font-size: 16px;
             line-height: 29px;
         }
@@ -51,7 +66,7 @@ const NewsContainerWrapper = styled.div`
             line-height: 25px;
         }
 
-        p{
+        .News-Content{
             font-size: 12px;
             line-height: 20px;
         }
@@ -64,7 +79,7 @@ const NewsContainerWrapper = styled.div`
             word-break: break-all;
         }
 
-        p{
+        .News-Content{
             font-size: 5px;
             line-height: 10px;
             word-break: break-all;
@@ -73,18 +88,30 @@ const NewsContainerWrapper = styled.div`
 `
 
 
-const NewsContainer = ({ Thumbnail, NewsContent }) => {
+const NewsContainer = ({ Thumbnail, NewsContent, Title, DateStamp, url }) => {
     return (
         <NewsContainerWrapper>
             <div className='Header'>
-                <h4>Pawleena church proving popular with buyers</h4>
-                <h4>24 NOV 2022</h4>
+                <h4>{Title}</h4>
+                <h4>{moment(DateStamp).format('DD MMM YYYY')}</h4>
             </div>
             <div>
                 <div className='Image-Container'>
                     <img src={Thumbnail} alt="news thumbnail"></img>
                 </div>
-                <p>{NewsContent}</p>
+                <p className='News-Content'>{NewsContent}</p>
+                <div className='Button-Container'>
+                    <a href={url} target='_blank' rel="noopener noreferrer external" >
+                        <ContactButton
+                            Type={'button'}
+                            Background={'#007CB4'}
+                            BorderRadius={'16px'}
+                            Display={'none'}
+                            ButtonText={'Read More'}
+                            Padding={(window.screen.availWidth >= 150) ? '0 var(--card-padding)' : null}
+                        />
+                    </a>
+                </div>
             </div>
         </NewsContainerWrapper>
     )
