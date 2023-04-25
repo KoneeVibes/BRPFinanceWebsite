@@ -92,7 +92,7 @@ const Footer = () => {
         <Newsletter />
       </div>
       <div className='Lower-Section'>
-        <p>Copyright @ Lemon Designs 2003. All Rights Reserved.</p>
+        <p>Copyright @ Lemon Designs 2023. All Rights Reserved.</p>
       </div>
     </FooterWrapper>
   )
