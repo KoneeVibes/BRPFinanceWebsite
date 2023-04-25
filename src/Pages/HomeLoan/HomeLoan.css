@@ -20,11 +20,6 @@
     align-items: stretch;
 }
 
-#HomeLoan .Hero-Tab {
-    padding: var(--sectioning-gap);
-    margin: var(--sectioning-gap);
-}
-
 #HomeLoan .Hero-Tab #Image-Text-Box {
     padding: calc(2 * var(--flex-gap));
     background: #F6F6F6;
