@@ -11,6 +11,7 @@ import ProcessIcon from './Assets/ProcessIcon.svg';
 import Calendly from '../../Components/Calendly/Calendly';
 import SendMail from '../../Components/SendMail/SendMail';
 import Footer from '../../Components/Footer/Footer';
+import Counter from '../../Components/Counter/Counter';
 
 const HomeLoan = () => {
     return (
@@ -25,6 +26,7 @@ const HomeLoan = () => {
                 DisplayBtn={'none'}
                 DisplayReview={'none'}
             />
+            <Counter/>
             <div className='Hero-Tab'>
                 <ImageTextBox src={ImageBoxPhoto}
                     DisplayCardII={'none'}

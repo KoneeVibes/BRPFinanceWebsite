@@ -29,6 +29,10 @@ const NewsletterWrapper = styled.section`
         margin: var(--sectioning-gap);
     }
 
+    #ck-email::placeholder{
+        color: rgb(46, 46, 46);
+    }
+
     #ck-email{
         width: 19.068125em;
         padding: var(--form-padding);
@@ -41,8 +45,7 @@ const NewsletterWrapper = styled.section`
         font-weight: 500;
         line-height: 26px;
         letter-spacing: -0.02em;
-        color: #181433;
-        opacity: 0.2;
+         color: rgb(46, 46, 46);
     }
 
     form{

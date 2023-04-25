@@ -29,7 +29,10 @@
 
 #About .Animated-Hero {
     margin: var(--page-padding);
-    padding: var(--sectioning-gap);
+}
+
+.DisplayNone {
+    display: none !important;
 }
 
 #About .Hero-Tab {

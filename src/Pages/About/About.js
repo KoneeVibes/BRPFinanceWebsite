@@ -16,6 +16,7 @@ import ImageIV from './Assets/ImageIV.svg';
 import Testimony from './Assets/TestimonyPhoto.svg';
 import Calendly from '../../Components/Calendly/Calendly';
 import ContactButton from '../../Components/DownloadButton/ContactButton';
+import Counter from '../../Components/Counter/Counter'
 
 const About = () => {
     return (
@@ -29,6 +30,7 @@ const About = () => {
                 BtnTxt={'Download your free guide to using a mortgage broker'}
                 widthLF={'55%'}
                 widthRF={'45%'} />
+            <Counter/>
             <div className='Animated-Hero'>
                 <AnimatedHero />
             </div>

@@ -16,6 +16,10 @@ const NavbarWrapper = styled.nav`
     min-height: var(--nav-height);
     padding: var(--page-padding);
 
+    .DisplayNone{
+        display: none;
+    }
+
     ul{
         display: flex;
         gap: 3em;
@@ -31,6 +35,10 @@ const NavbarWrapper = styled.nav`
         font-weight: 500;
         line-height: 36px;
         padding: 0 1em;
+    }
+
+    a:hover{
+        color: #007CB4;
     }
 
     a{
@@ -192,7 +200,7 @@ const NavbarWrapper = styled.nav`
 
     @media screen and (max-width: 150px){
         li{
-            font-size: 12px;
+            font-size: 5px;
             word-wrap: break-word;
         }
 
@@ -206,7 +214,12 @@ const NavbarWrapper = styled.nav`
             flex-wrap: wrap;
         }
 
+        .SM-Icons img{
+            width: 30%;
+        }
+
         .Nav-Footer p{
+            font-size: 5px;
             word-break: break-all;
         }
     }
@@ -230,6 +243,17 @@ const Navbar = () => {
 
         const hamburger = document.querySelector('.hamburger');
         const navMenu = document.querySelector('ul');
+        const counter = document.querySelector('.CounterContainer');
+        const navFooter = document.querySelector('.Nav-Footer');
+        console.log(navFooter);
+
+        if (counter) {
+            (isActive) ? counter.classList.add('DisplayNone') : counter.classList.remove('DisplayNone');
+        }
+
+        if (navFooter){
+            (!isActive) ? navFooter.classList.add('DisplayNone') : navFooter.classList.remove('DisplayNone');
+        }
 
         function resetToDefault() {
             if (window.screen.availWidth >= 1024) {
