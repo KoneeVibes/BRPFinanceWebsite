@@ -140,13 +140,13 @@ export const LiveNews = () => {
 
     const navigate = useNavigate();
     const [News, setNews] = useState([]);
-    const articles = News.results;
+    const articles = News.articles;
     const NEWS = process.env.REACT_APP_NEWS;
 
     useEffect(() => {
         const fetchNews = async () => {
             const response = await fetch(
-                `https://api.nytimes.com/svc/topstories/v2/realestate.json?api-key=${NEWS}`
+                `https://newsapi.org/v2/everything?q=australia&apiKey=${NEWS}`
             );
             const data = await response.json();
             setNews(data);
@@ -156,20 +156,21 @@ export const LiveNews = () => {
 
     return (
         <div className='NewsTabs' style={{ display: 'flex', flexDirection: 'column', gap: 'var(--sectioning-gap)' }}>
-            {articles?.slice(0, 5).map((article, index) => {
+            {articles?.map((article, index) => {
+                if (!article.urlToImage){
+                    return null
+                }
                 return (
                     <LiveNewsWrapper key={index} className='NewsTab' >
                         <div className='Thumbnail-Section'>
-                            <img src={article.multimedia[0].url} alt='thumbnail' onClick={() => {
+                            <img src={article.urlToImage} alt='thumbnail' onClick={() => {
                                 navigate(`/news/${index}`)
                             }} ></img>
                         </div>
                         <div className='Text-Section'>
                             <h4>{article.title}</h4>
-                            <h4>{moment(article.published_date
-                            ).format('DD MMM YYYY')}</h4>
-                            <p className='description'>{article.abstract
-                            }</p>
+                            <h4>{moment(article.publishedAt).format('DD MMM YYYY')}</h4>
+                            <p className='description'>{article.description}</p>
                             <ContactButton
                                 Background={'none'}
                                 ButtonText={'Read More '}
