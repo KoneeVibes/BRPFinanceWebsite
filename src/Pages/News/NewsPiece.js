@@ -10,13 +10,13 @@ const NewsPiece = () => {
 
   const { id } = useParams();
   const [newsItem, setnewsItem] = useState([]);
-  const article = newsItem.articles;
+  const article = newsItem.results;
   const NEWS = process.env.REACT_APP_NEWS;
 
   useEffect(() => {
     const fetchNews = async () => {
       const response = await fetch(
-        `https://newsapi.org/v2/everything?q=australia&apiKey=${NEWS}`
+        `https://api.nytimes.com/svc/topstories/v2/realestate.json?api-key=${NEWS}`
       );
       const data = await response.json();
       setnewsItem(data);
@@ -37,9 +37,9 @@ const NewsPiece = () => {
         widthRF={'60%'} />
       <NewsContainer
         Title={article && article[id].title}
-        DateStamp={article && article[id].publishedAt}
-        Thumbnail={article && article[id].urlToImage}
-        NewsContent={article && article[id].content}
+        DateStamp={article && article[id].published_date}
+        Thumbnail={article && article[id].multimedia[0].url}
+        NewsContent={article && article[id].abstract}
         url={article && article[id].url} />
       <Footer />
     </div>
