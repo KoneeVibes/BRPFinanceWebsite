@@ -26,6 +26,11 @@ const FooterWrapper = styled.footer`
     text-align: center;
   }
 
+  a{
+    text-decoration: none;
+    color: #000000;
+  }
+
   @media screen and (min-width: 1440px) and (max-width: 1728px){
     .Upper-Section{
       gap: 6em;
@@ -92,7 +97,7 @@ const Footer = () => {
         <Newsletter />
       </div>
       <div className='Lower-Section'>
-        <p>Copyright @ Lemon Designs 2023. All Rights Reserved.</p>
+        <p>Copyright @ <a href='https://lemonhq.xyz/' rel='noopener noreferrer external' target='_blank'>Lemon Designs 2023.</a> All Rights Reserved.</p>
       </div>
     </FooterWrapper>
   )
