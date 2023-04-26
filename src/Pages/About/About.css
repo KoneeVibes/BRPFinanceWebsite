@@ -108,6 +108,25 @@
     text-align: left;
 }
 
+#About .slide-in {
+    opacity: 0;
+    animation: slide-in-right 1s ease-out forwards;
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+@keyframes slide-in-right {
+    0% {
+        opacity: 0;
+        transform: translate3d(150%, 0, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
 #About .Testimony-Section .Text-Card h6 {
     font-family: 'Montserrat';
     font-size: 65px;
@@ -116,6 +135,7 @@
     letter-spacing: 0em;
     text-align: left;
     margin: 0;
+    margin-block-start: 2em;
 }
 
 #About .Testimony-Section .Text-Card .Body-Text {
@@ -190,6 +210,16 @@
 
     .Btn-Container {
         margin: var(--sectioning-gap);
+    }
+
+    #About .Testimony-Section .Text-Card h6 {
+        margin-block-start: 0;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+    #About .Testimony-Section .Flex-Box{
+        align-items: center;
     }
 }
 

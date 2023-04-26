@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 import TextCard from '../TextCard/TextCard';
 
@@ -53,11 +53,38 @@ const ImageTextBoxWrapper = styled.section`
 `
 
 const ImageTextBox = ({ src, IconI, IconII, UtilityI, UtilityII, HeadTextI, HeadTextII, BodyI, BodyII, Button, widthIB, widthTCB, gap, flexDirection, DisplayI, DisplayII, DisplayCardI, DisplayCardII, alignItems, UtilityIII, UtilityIV, IntroI, IntroII, One, Two, Three, Four, Five, Six, Seven, ParentGap, displayOne, displayTwo, displayThree, displayFour, displayFive, displaySix, displaySeven, displayEight, displayNine, displayTen, displayUl, IconIII, IntroIII, HeadTextIII, BodyIII, DisplayCardIII, DisplayIII, UtilityV }) => {
+
+    const [isActive, setIsActive] = useState(false);
+    const imgRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setIsActive(entry.isIntersecting);
+            },
+            { rootMargin: '0px', threshold: 0 }
+        );
+
+        const currentImgRef = imgRef.current;
+
+        if (currentImgRef) {
+            observer.observe(currentImgRef);
+        }
+
+        return () => {
+            if (currentImgRef) {
+                observer.unobserve(currentImgRef);
+            }
+        };
+    }, []);
+
     return (
         <ImageTextBoxWrapper id='Image-Text-Box' style={{ gap: ParentGap }}>
             <div className='Flex-Box' style={{ gap: gap, flexDirection: flexDirection, alignItems: alignItems }}>
-                <div className='Image-Box' style={{ flex: widthIB }}>
-                    <img src={src} alt='relevant illustration'></img>
+                <div className='Image-Box'
+                    ref={imgRef} style={{ flex: widthIB }}>
+                    <img src={src}
+                        alt='relevant illustration' className={`${isActive ? 'slide-in' : ''}`}></img>
                 </div>
                 <div className='Text-Card-Box' style={{ flex: widthTCB }}>
                     <TextCard Icon={IconI}
@@ -94,13 +121,13 @@ const ImageTextBox = ({ src, IconI, IconII, UtilityI, UtilityII, HeadTextI, Head
                         Display={DisplayCardII}
                         Utility={UtilityII} />
                     <TextCard
-                        Icon={IconIII} 
+                        Icon={IconIII}
                         Intro={IntroIII}
                         HeadText={HeadTextIII}
                         Body={BodyIII}
                         DisplayIcon={DisplayIII}
                         Display={DisplayCardIII}
-                        Utility={UtilityV}/>
+                        Utility={UtilityV} />
                 </div>
             </div>
             <div className='Utility-Box'>

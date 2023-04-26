@@ -13,7 +13,7 @@ import ImageI from './Assets/ImageI.svg';
 import ImageII from './Assets/ImageII.svg';
 import ImageIII from './Assets/ImageIII.svg';
 import ImageIV from './Assets/ImageIV.svg';
-import Testimony from './Assets/TestimonyPhoto.svg';
+import Testimony from './Assets/Testimony.svg';
 import Calendly from '../../Components/Calendly/Calendly';
 import ContactButton from '../../Components/DownloadButton/ContactButton';
 import Counter from '../../Components/Counter/Counter'
@@ -30,7 +30,7 @@ const About = () => {
                 BtnTxt={'Download your free guide to using a mortgage broker'}
                 widthLF={'55%'}
                 widthRF={'45%'} />
-            <Counter/>
+            <Counter />
             <div className='Animated-Hero'>
                 <AnimatedHero />
             </div>
@@ -89,7 +89,7 @@ const About = () => {
                         Background={'#FFF5F5'}
                         BorderRadius={'7px'}
                         BoxShadow={'0px 4px 3px rgba(0, 0, 0, 0.25)'}
-                        Padding={(window.screen.availWidth >= 150)? `0 var(--card-padding)` : '0'} />} />
+                        Padding={(window.screen.availWidth >= 150) ? `0 var(--card-padding)` : '0'} />} />
             </div>
             <div className='Calendly-Box'>
                 <Calendly />

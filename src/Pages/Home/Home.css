@@ -18,6 +18,25 @@
     color: #FFFFFF;
 }
 
+#Home .Hero-Tab .slide-in {
+    opacity: 0;
+    animation: slide-in-from-left 1s ease-out forwards;
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+@keyframes slide-in-from-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-150%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 #Home .Hero-Tab {
     margin: var(--sectioning-gap);
 }
@@ -45,6 +64,25 @@
     background: #F6F6F6;
     border: 1px solid #DBE4E9;
     border-radius: 20px;
+}
+
+#Home .Contact-Us .slide-in {
+    opacity: 0;
+    animation: slide-in-right 1s ease-out forwards;
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+@keyframes slide-in-right {
+    0% {
+        opacity: 0;
+        transform: translate3d(150%, 0, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
 }
 
 #Home .Contact-Us #Image-Text-Box {
@@ -313,7 +351,7 @@
         width: 80%;
     }
 
-    #Home .Header{
+    #Home .Header {
         align-items: stretch;
     }
 
