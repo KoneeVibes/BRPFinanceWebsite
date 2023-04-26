@@ -109,11 +109,6 @@ const CounterWrapper = styled.section`
     }
 
     @media screen and (max-width: 289px){
-        // padding: 0;
-        .container{
-            // padding: 0em;
-        }
-
         h5{
             font-size: 10px;
             line-height: 10px;
