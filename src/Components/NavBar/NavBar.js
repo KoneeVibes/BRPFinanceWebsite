@@ -245,7 +245,6 @@ const Navbar = () => {
         const navMenu = document.querySelector('ul');
         const counter = document.querySelector('.CounterContainer');
         const navFooter = document.querySelector('.Nav-Footer');
-        console.log(navFooter);
 
         if (counter) {
             (isActive) ? counter.classList.add('DisplayNone') : counter.classList.remove('DisplayNone');
