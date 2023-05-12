@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import ArrowRight from './Assets/ArrowRightII.svg'
 import { useNavigate } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 const ContactButtonWrapper = styled.button`
     display: flex;
@@ -59,17 +60,19 @@ const ContactButtonWrapper = styled.button`
     }
 `
 
-const ContactButton = ({ButtonText, Background, Type, Width, Display, BorderRadius, BoxShadow, Padding, url}) => {
+const ContactButton = ({ ButtonText, Background, Type, Width, Display, BorderRadius, BoxShadow, Padding, url, to }) => {
 
   const navigate = useNavigate();
 
   return (
-    <ContactButtonWrapper type={Type} style={{background: Background, width: Width, borderRadius: BorderRadius, boxShadow: BoxShadow, padding: Padding}} onClick={() => {
-      navigate(url)
-    }} >
+    <HashLink style={{textDecoration: 'none'}} to={to} smooth>
+      <ContactButtonWrapper type={Type} style={{ background: Background, width: Width, borderRadius: BorderRadius, boxShadow: BoxShadow, padding: Padding }} onClick={() => {
+        navigate(url)
+      }} >
         <p id='Button-Text'>{ButtonText}</p>
-        <img src={ArrowRight} alt='Arrow Right Icon' style={{display: Display}}></img>
-    </ContactButtonWrapper>
+        <img src={ArrowRight} alt='Arrow Right Icon' style={{ display: Display }}></img>
+      </ContactButtonWrapper>
+    </HashLink>
   )
 }
 

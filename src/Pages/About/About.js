@@ -101,7 +101,10 @@ const About = () => {
                         Background={'#FFF5F5'}
                         BorderRadius={'7px'}
                         BoxShadow={'0px 4px 3px rgba(0, 0, 0, 0.25)'}
-                        Padding={(window.screen.availWidth >= 150) ? `0 var(--card-padding)` : '0'} />} />
+                        Padding={(window.screen.availWidth >= 150) ? `0 var(--card-padding)` : '0'}
+                        to={'#Calendly'}
+                    />}
+                />
             </div>
             <div className='Calendly-Box'>
                 <Calendly />
