@@ -22,7 +22,7 @@ const HomeLoan = () => {
                 widthLF={'60%'}
                 widthRF={'40%'}
                 HeaderTextI={'Buying a property is a time to be excited. '}
-                Body={'Don’t waste it looking for a loan.'}
+                Body={'Don’t waste your time looking for loan when we can do that for you.'}
                 DisplayBtn={'none'}
                 DisplayReview={'none'}
             />

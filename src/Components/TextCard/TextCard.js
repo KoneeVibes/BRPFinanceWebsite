@@ -37,10 +37,10 @@ const TextCardWrapper = styled.div`
     }
 `
 
-const TextCard = ({ Icon, HeadText, Body, Button, DisplayIcon, Display, Background, Border, BorderRadius, BoxShadow, Gap, FlexDirection, Utility, Intro, one, two, three, four, five, six, seven, eight, nine, ten, displayHeadText, HeadTextI, displayUl, displayOne, displayTwo, displayThree, displayFour, displayFive, displaySix, displaySeven, displayEight, displayNine, displayTen, displaySubH6, UtiityI, UtilityII }) => {
+const TextCard = ({ Icon, HeadText, Body, Button, DisplayIcon, Display, Background, Border, BorderRadius, BoxShadow, Gap, FlexDirection, Utility, Intro, one, two, three, four, five, six, seven, eight, nine, ten, displayHeadText, HeadTextI, displayUl, displayOne, displayTwo, displayThree, displayFour, displayFive, displaySix, displaySeven, displayEight, displayNine, displayTen, displaySubH6, UtiityI, UtilityII, ContactInfoI, ContactInfoII, alignItems }) => {
 
     return (
-        <TextCardWrapper className='Text-Card' style={{ display: Display, flexDirection: FlexDirection, gap: Gap, background: Background, border: Border, borderRadius: BorderRadius, boxShadow: BoxShadow }}>
+        <TextCardWrapper className='Text-Card' style={{ display: Display, flexDirection: FlexDirection, gap: Gap, background: Background, border: Border, borderRadius: BorderRadius, boxShadow: BoxShadow, alignItems: alignItems }}>
             <div className='Icon-Container'>
                 <img src={Icon} alt='relevant icon' style={{ display: DisplayIcon }}></img>
                 <h6 style={{ display: displayHeadText ? displayHeadText : "none" }}>{HeadTextI}</h6>
@@ -48,7 +48,7 @@ const TextCard = ({ Icon, HeadText, Body, Button, DisplayIcon, Display, Backgrou
             <div className='Text-Container'>
                 <p className='Intro-Text'>{Intro}</p>
                 <h6>{HeadText}</h6>
-                <p className='Body-Text'>{Body}</p>
+                <p className='Body-Text'>{Body}<br/>{ContactInfoI}<br/>{ContactInfoII}</p>
                 <ul style={{ display: displayUl ? displayUl : "none" }}>
                     <li id='one' style={{ display: !displayOne ? "list-item" : displayOne }}>{one}</li>
                     <li id='two' style={{ display: !displayTwo ? "list-item" : displayTwo }}>{two}</li>

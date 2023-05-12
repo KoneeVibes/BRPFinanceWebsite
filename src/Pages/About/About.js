@@ -17,6 +17,7 @@ import Testimony from './Assets/Testimony.svg';
 import Calendly from '../../Components/Calendly/Calendly';
 import ContactButton from '../../Components/DownloadButton/ContactButton';
 import Counter from '../../Components/Counter/Counter'
+import { handleButtonClick } from '../Home/Home';
 
 const About = () => {
     return (
@@ -29,7 +30,8 @@ const About = () => {
                 Body={"We'll help navigate you through the competitive and ever-changing mortgage landscape to find the right loan for you."}
                 BtnTxt={'Download your free guide to using a mortgage broker'}
                 widthLF={'55%'}
-                widthRF={'45%'} />
+                widthRF={'45%'}
+                handleClick={() => handleButtonClick('https://www.brpfinance.com.au/why-use-a-broker-guide/')} />
             <Counter />
             <div className='Animated-Hero'>
                 <AnimatedHero />
@@ -51,27 +53,37 @@ const About = () => {
                 <TextCard Icon={ImageI}
                     HeadText={'Heath Brunn'}
                     Body={"Managing Director and Founder of BRP finance. Senior Mortgage Broker "}
+                    ContactInfoI={'Heath@brpfinance.com.au'}
+                    ContactInfoII={'0466 112 504'}
                     Display={'flex'}
                     FlexDirection={'column'}
-                    Gap={`var(--flex-gap)`} />
+                    Gap={`var(--flex-gap)`}
+                    alignItems={'center'} />
                 <TextCard Icon={ImageII}
                     HeadText={'Sarah Christopher'}
                     Body={'Mortgage and Finance Broker'}
+                    ContactInfoI={'Sarah@brpfinance.com.au'}
+                    ContactInfoII={'0418 521 024'}
                     Display={'flex'}
                     FlexDirection={'column'}
-                    Gap={`var(--flex-gap)`} />
+                    Gap={`var(--flex-gap)`}
+                    alignItems={'center'} />
                 <TextCard Icon={ImageIII}
                     HeadText={'Adam Shugg'}
                     Body={'Mortgage and Finance Broker'}
+                    ContactInfoI={'Adam@brpfinance.com.au'}
+                    ContactInfoII={'0497 171 181'}
                     Display={'flex'}
                     FlexDirection={'column'}
-                    Gap={`var(--flex-gap)`} />
+                    Gap={`var(--flex-gap)`}
+                    alignItems={'center'} />
                 <TextCard Icon={ImageIV}
                     HeadText={'Leah & Tara'}
                     Body={'Admin Team'}
                     Display={'flex'}
                     FlexDirection={'column'}
-                    Gap={`var(--flex-gap)`} />
+                    Gap={`var(--flex-gap)`}
+                    alignItems={'center'} />
             </div>
             <div className='Testimony-Section'>
                 <ImageTextBox src={Testimony}

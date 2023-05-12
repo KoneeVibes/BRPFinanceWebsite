@@ -284,7 +284,7 @@ const Navbar = () => {
                     >Home Loan</Link>
                 </li>
                 <li>
-                    <Link to={'/news'}>News</Link>
+                    <a href='https://www.brpfinance.com.au/newsfeed/' rel='noopener noreferrer external' target='_blank'>News</a>
                 </li>
                 <li>
                     <HashLink to='#Footer' smooth>Contact</HashLink>

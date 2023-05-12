@@ -54,9 +54,9 @@ const DownloadButtonWrapper = styled.button`
     }
 `
 
-const DownloadButton = ({ ButtonText, Direction, Background }) => {
+const DownloadButton = ({ ButtonText, Direction, Background, handleClick }) => {
     return (
-        <DownloadButtonWrapper style={{ flexDirection: Direction, background: Background }}>
+        <DownloadButtonWrapper onClick={handleClick} style={{ flexDirection: Direction, background: Background }}>
             <img src={DownloadIcon} alt='Download Icon'></img>
             <p>{ButtonText}</p>
             <img src={ArrowRight} alt='Arrow right Icon'></img>

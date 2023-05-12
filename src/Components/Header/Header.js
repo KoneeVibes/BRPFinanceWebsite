@@ -25,7 +25,7 @@ const HeaderWrapper = styled.section`
     }
 `
 
-const Header = ({ background, height, widthLF, widthRF, HeaderTextI, HeaderTextII, Body, gap, BtnTxt, DisplayBtn, DisplayReview, src, srcPosition }) => {
+const Header = ({ background, height, widthLF, widthRF, HeaderTextI, HeaderTextII, Body, gap, BtnTxt, DisplayBtn, DisplayReview, src, srcPosition, handleClick }) => {
 
     return (
         <HeaderWrapper className='Header' style={{ backgroundImage: background, height: height, gap: gap }}>
@@ -34,7 +34,7 @@ const Header = ({ background, height, widthLF, widthRF, HeaderTextI, HeaderTextI
                 <h2>{HeaderTextII}</h2>
                 <p id='Body'>{Body}</p>
                 <div className='Btn-Container' style={{ display: DisplayBtn }}>
-                    <DownloadButton ButtonText={BtnTxt} />
+                    <DownloadButton ButtonText={BtnTxt} handleClick={handleClick} />
                 </div>
                 <div className='Review-Container' style={{ display: DisplayReview }}>
                     <StarReview />

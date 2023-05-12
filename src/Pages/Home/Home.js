@@ -22,8 +22,12 @@ import IconV from './Assets/SquaredIconIII.svg';
 import SendMail from '../../Components/SendMail/SendMail';
 import Calendly from '../../Components/Calendly/Calendly';
 
+export const handleButtonClick = (link) => {
+    window.open(link, '_blank');
+};
 
 const Home = () => {
+
     return (
         <div id='Home'>
             <NavBar />
@@ -33,7 +37,8 @@ const Home = () => {
                 widthRF={'55%'}
                 HeaderTextI={'Looking for a home loan? BRP Finance is here to help.'}
                 Body={"If it's your first home, or if it's time to renovate, refinance or invest, we're here to help make it happen."}
-                BtnTxt={'Download your free guide to using a mortgage broker'} />
+                BtnTxt={'Download your free guide to using a mortgage broker'}
+                handleClick={() => handleButtonClick('https://www.brpfinance.com.au/why-use-a-broker-guide/')} />
             <div className='Hero-Tab'>
                 <ImageTextBox src={HeroPhoto}
                     IconI={IconI}
@@ -43,10 +48,10 @@ const Home = () => {
                     HeadTextII={'We streamline the process.'}
                     BodyI={'There are lots of good reasons why more than half of Australians now use a broker to secure a home loan. Probably the most important one that is we work for you, not the banks. We speak to you first to find out what you need, and then we use our knowledge of the market to better negotiate with the lenders. Then we get a range of options before we work out which one is right for you, not what’s right for the lenders.'}
                     BodyII={'The first step is we discuss what your financial needs and goals are. Then we research the many different products from a range of lenders to ensure we find the right solution. And just to make things even easier, we’ll do the paperwork, manage the application process and then take it through to settlement.Best of all, because this is what we specialise in, we get the process moving quickly. We use our relationships with lenders to secure your finance as fast as possible.'}
-                    Button={<DownloadButton ButtonText={'Download Our Guide'} />}
+                    Button={<DownloadButton ButtonText={'Download Our Guide'} handleClick={() => handleButtonClick('https://www.brpfinance.com.au/why-use-a-broker-guide/')} />}
                     widthIB={'55%'}
                     widthTCB={'45%'}
-                    gap={(window.screen.availWidth <= 1440) ? ((window.screen.availWidth <= 1024)? 'var(--sectioning-gap)' : '7em') : '3em'} />
+                    gap={(window.screen.availWidth <= 1440) ? ((window.screen.availWidth <= 1024) ? 'var(--sectioning-gap)' : '7em') : '3em'} />
             </div>
             <div className='Contact-Us'>
                 <ImageTextBox src={ContactUs}
@@ -59,8 +64,7 @@ const Home = () => {
                     DisplayII={'none'}
                     DisplayCardII={'none'}
                     DisplayCardIII={'none'}
-                    Button={<ContactButton ButtonText={'Contact a Mortage Broker'}
-                        Background={'#F6F6F6'} />}
+                    Button={<ContactButton ButtonText={'Contact a Mortage Broker'} Background={'#F6F6F6'} />}
                     alignItems={'center'} />
             </div>
             <div className='Getting-Started'>
@@ -69,30 +73,36 @@ const Home = () => {
                     <TextCard Icon={HomeIcon}
                         HeadText={'Investing in property'}
                         Body={'Having the right people to help you is key when investing in property. Do your homework on the property market before you dive in, and we’ll be thrilled to help you when it comes to financing your decision.'}
-                        Button={<DownloadButton ButtonText={'Download your free guide'}
+                        Button={<DownloadButton
+                            ButtonText={'Download your free guide'}
                             Direction={'row-reverse'}
                             Display={'none'}
-                            Background={'none'} />}
+                            Background={'none'}
+                            handleClick={() => handleButtonClick('https://www.brpfinance.com.au/investing-in-property-guide/')} />}
                         Background={'#F7F7F7'}
                         Border={'1px solid #DBE4E9'}
                         BorderRadius={'20px'} />
                     <TextCard Icon={LoanIcon}
                         HeadText={'Refinancing your home loan'}
                         Body={'As time marches on, situations change. Perhaps you’ve changed jobs? Or there’s a new addition to the family? Maybe you would just like a better rate or maybe you want to start that renovation project.'}
-                        Button={<DownloadButton ButtonText={'Download your free guide'}
+                        Button={<DownloadButton
+                            ButtonText={'Download your free guide'}
                             Direction={'row-reverse'}
                             Display={'none'}
-                            Background={'none'} />}
+                            Background={'none'}
+                            handleClick={() => handleButtonClick('https://www.brpfinance.com.au/looking-to-refinance-guide/')} />}
                         Background={'#F7F7F7'}
                         Border={'1px solid #DBE4E9'}
                         BorderRadius={'20px'} />
                     <TextCard Icon={MortgageIcon}
                         HeadText={'Becoming a first home buyer'}
                         Body={'Buying your first home is an exciting, but big step to take and one that comes with many questions and decisions. The two big questions are how much you can borrow and what are your likely repayments to be.'}
-                        Button={<DownloadButton ButtonText={'Download your free guide'}
+                        Button={<DownloadButton
+                            ButtonText={'Download your free guide'}
                             Direction={'row-reverse'}
                             Display={'none'}
-                            Background={'none'} />}
+                            Background={'none'}
+                            handleClick={() => handleButtonClick('https://www.brpfinance.com.au/first-home-buyers-guide/')} />}
                         Background={'#F7F7F7'}
                         Border={'1px solid #DBE4E9'}
                         BorderRadius={'20px'} />
