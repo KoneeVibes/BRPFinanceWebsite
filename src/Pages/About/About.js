@@ -78,8 +78,9 @@ const About = () => {
                     Gap={`var(--flex-gap)`}
                     alignItems={'center'} />
                 <TextCard Icon={ImageIV}
-                    HeadText={'Leah & Tara'}
+                    HeadText={'Rene Gicale'}
                     Body={'Admin Team'}
+                    ContactInfoI={"03 9123 4584"}
                     Display={'flex'}
                     FlexDirection={'column'}
                     Gap={`var(--flex-gap)`}

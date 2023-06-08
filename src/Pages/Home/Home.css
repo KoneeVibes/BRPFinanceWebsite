@@ -59,6 +59,83 @@
     letter-spacing: 0em;
 }
 
+#Home .Other-Financial-Services {
+    margin: var(--sectioning-gap);
+    padding: var(--page-padding);
+    background: #007CB4;
+}
+
+#Home .Other-Financial-Services .Image-Box {
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+#Home .Other-Financial-Services .Image-Box img {
+    height: 100%;
+    object-fit: cover;
+}
+
+#Home .Other-Financial-Services #Image-Text-Box {
+    margin: 0;
+}
+
+#Home .Other-Financial-Services #Image-Text-Box .Flex-Box .Text-Card:nth-child(1) .Text-Container h6 {
+    font-family: "Montserrat";
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 36px;
+    color: #FFFFFF;
+    margin-top: 0;
+}
+
+#Home .Other-Financial-Services #Image-Text-Box .Text-Card .Text-Container .Body-Text {
+    display: none;
+}
+
+#Home .Other-Financial-Services #Image-Text-Box .Text-Card-Box {
+    gap: var(--card-padding);
+}
+
+#Home .Other-Financial-Services #Image-Text-Box .Text-Card-Box .Utility-Box {
+    padding: var(--card-padding);
+    background: #F4F4F4;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    border: 1px solid #FFFFFF;
+    cursor: pointer;
+}
+
+#Home .Other-Financial-Services #Image-Text-Box .Text-Card-Box .Utility-Box:hover {
+    background: none;
+}
+
+#Home .Other-Financial-Services #Image-Text-Box .Text-Card-Box .Utility-Box:hover h6,
+#Home .Other-Financial-Services #Image-Text-Box .Text-Card-Box .Utility-Box:hover p {
+    color: #FFFFFF;
+}
+
+#Home .Other-Financial-Services #Image-Text-Box .Text-Card-Box .Utility-Box:hover img {
+    filter: brightness(0) invert(1);
+}
+
+#Home .Other-Financial-Services #Image-Text-Box .Text-Card-Box .Utility-Box h6 {
+    font-family: "Montserrat";
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    margin: 0;
+}
+
+#Home .Other-Financial-Services #Image-Text-Box .Text-Card-Box .Utility-Box p {
+    font-family: "Manrope";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
 #Home .Contact-Us {
     margin: var(--page-padding);
     background: #F6F6F6;
@@ -338,6 +415,10 @@
     #Home .Hero-Tab {
         margin: 0;
     }
+
+    #Home .Other-Financial-Services .Image-Box {
+        overflow: unset;
+    }
 }
 
 @media screen and (max-width: 693px) {
@@ -376,7 +457,8 @@
         line-height: 20px;
     }
 
-    #Home .Contact-Us .Text-Card h6 {
+    #Home .Contact-Us .Text-Card h6,
+    #Home .Other-Financial-Services #Image-Text-Box .Flex-Box .Text-Card:nth-child(1) .Text-Container h6 {
         font-size: 25px;
         line-height: 30px;
     }
@@ -429,12 +511,14 @@
         line-height: 20px;
     }
 
-    #Home .Hero-Tab .Text-Card h6 {
+    #Home .Hero-Tab .Text-Card h6,
+    #Home .Other-Financial-Services #Image-Text-Box .Text-Card-Box .Utility-Box h6 {
         font-size: 14px;
         line-height: 22px;
     }
 
-    #Home .Hero-Tab .Body-Text {
+    #Home .Hero-Tab .Body-Text,
+    #Home .Other-Financial-Services #Image-Text-Box .Text-Card-Box .Utility-Box p {
         font-size: 10px;
     }
 
@@ -442,7 +526,8 @@
         width: 20%;
     }
 
-    #Home .Contact-Us .Text-Card h6 {
+    #Home .Contact-Us .Text-Card h6,
+    #Home .Other-Financial-Services #Image-Text-Box .Flex-Box .Text-Card:nth-child(1) .Text-Container h6 {
         font-size: 18px;
         line-height: 25px;
     }
@@ -487,6 +572,10 @@
     #Home .Info-Container .Text-Card .Icon-Container img {
         width: 20%;
     }
+
+    #Home .Other-Financial-Services #Image-Text-Box .Text-Card-Box .Utility-Box {
+        padding: 5%;
+    }
 }
 
 @media screen and (max-width: 200px) {
@@ -524,19 +613,23 @@
 }
 
 @media screen and (max-width: 150px) {
-    #Home .Hero-Tab .Text-Card h6 {
+
+    #Home .Hero-Tab .Text-Card h6,
+    #Home .Other-Financial-Services #Image-Text-Box .Text-Card-Box .Utility-Box h6 {
         font-size: 10px;
         line-height: 18px;
         word-break: break-all;
     }
 
-    #Home .Hero-Tab .Body-Text {
+    #Home .Hero-Tab .Body-Text,
+    #Home .Other-Financial-Services #Image-Text-Box .Text-Card-Box .Utility-Box p {
         font-size: 8px;
         line-height: 15px;
         word-break: break-all;
     }
 
-    #Home .Contact-Us .Text-Card h6 {
+    #Home .Contact-Us .Text-Card h6,
+    #Home .Other-Financial-Services #Image-Text-Box .Flex-Box .Text-Card:nth-child(1) .Text-Container h6 {
         font-size: 10px;
         line-height: 15px;
         word-break: break-all;
@@ -580,5 +673,9 @@
         font-size: 8px;
         line-height: 15px;
         word-break: break-all;
+    }
+
+    #Home .Other-Financial-Services #Image-Text-Box .Text-Card-Box .Utility-Box {
+        gap: 5%;
     }
 }

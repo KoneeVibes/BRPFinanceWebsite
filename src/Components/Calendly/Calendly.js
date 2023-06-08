@@ -84,7 +84,7 @@ const Calendly = () => {
     return (
         <CalendlyWrapper id='Calendly'>
             <div className='Text-Flank'>
-                <h3>Still not sure? book a demo and see if it’s we’re a fit!</h3>
+                <h3>Still uncertain? Schedule a convenient online appointment with us.</h3>
                 <p>By the end of this audit call, you will have a clear understanding of the next steps you can take for your business to build and scale a human-centric product . </p><p>Find a time on Lemon’s (our creative director) calendar to schedule your call today and we look forward to speaking to you soon!</p>
             </div>
             <div className='Calendar-Flank'>

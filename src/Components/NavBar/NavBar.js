@@ -3,11 +3,9 @@ import styled from 'styled-components';
 import Logo from './Assets/Logo.svg';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
-import Twitter from '../Footer/Assets/TwitterIcon.svg';
-import LinkedIn from '../Footer/Assets/LinkedInIcon.svg';
-import Messenger from '../Footer/Assets/MessengerIcon.svg';
-import Instagram from '../Footer/Assets/UnknownIcon.svg';
-
+import Facebook from '../Footer/Assets/FacebookIcon.svg';
+import Tiktok from '../Footer/Assets/TiktokIcon.svg';
+import Instagram from '../Footer/Assets/InstagramIcon.svg';
 
 const NavbarWrapper = styled.nav`
     display: flex;
@@ -291,10 +289,9 @@ const Navbar = () => {
                 </li>
                 <div className='Nav-Footer'>
                     <div className='SM-Icons'>
-                        <Link><img src={LinkedIn} alt='LinkedIn Icon'></img></Link>
-                        <Link><img src={Messenger} alt='Messenger Icon'></img></Link>
-                        <Link><img src={Twitter} alt='Twitter Icon'></img></Link>
-                        <Link><img src={Instagram} alt='Instagram Icon'></img></Link>
+                        <a href="https://www.facebook.com/Brpfinance/" rel='noopener noreferrer external' target='_blank' ><img src={Facebook} alt='Facebook Icon'></img></a>
+                        <a href='https://www.instagram.com/brp_finance/' rel='noopener noreferrer external' target='_blank'><img src={Instagram} alt='Instagram Icon'></img></a>
+                        <a href='https://www.brpfinance.com.au/' rel='noopener noreferrer external' target='_blank' ><img src={Tiktok} alt='Tiktok Icon'></img></a>
                     </div>
                     <p>Copyright @ Lemon Designs 2023. All Rights Reserved.</p>
                 </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Footer from '../../Components/Footer/Footer';
 import Header from '../../Components/Header/Header';
 import ImageTextBox from '../../Components/ImageTextBox/ImageTextBox';
@@ -21,12 +21,32 @@ import IconIV from './Assets/SquaredIconII.svg';
 import IconV from './Assets/SquaredIconIII.svg';
 import SendMail from '../../Components/SendMail/SendMail';
 import Calendly from '../../Components/Calendly/Calendly';
+import OtherFinancialServices from './Assets/FinancialServices.svg';
+import BulletOne from "./Assets/BulletOne.svg";
+import BulletTwo from "./Assets/BulletTwo.svg";
+import BulletThree from "./Assets/BulletThree.svg";
 
 export const handleButtonClick = (link) => {
     window.open(link, '_blank');
 };
 
 const Home = () => {
+
+    const [isTablet, setIsTablet] = useState(false);
+
+    useEffect(() => {
+        const mediaQuery = window.matchMedia('(max-width: 1024px)');
+        const handleMediaQueryChange = (event) => {
+            setIsTablet(event.matches);
+        };
+
+        handleMediaQueryChange(mediaQuery);
+        mediaQuery.addEventListener('change', handleMediaQueryChange);
+
+        return () => {
+            mediaQuery.removeEventListener('change', handleMediaQueryChange);
+        };
+    }, []);
 
     return (
         <div id='Home'>
@@ -52,6 +72,47 @@ const Home = () => {
                     widthIB={'55%'}
                     widthTCB={'45%'}
                     gap={(window.screen.availWidth <= 1440) ? ((window.screen.availWidth <= 1024) ? 'var(--sectioning-gap)' : '7em') : '3em'} />
+            </div>
+            <div className='Other-Financial-Services'>
+                <ImageTextBox
+                    flexDirection={isTablet ? "column-reverse" : "row-reverse"}
+                    src={OtherFinancialServices}
+                    widthIB={"55%"}
+                    widthTCB={"45%"}
+                    gap={`var(--flex-gap)`}
+                    DisplayI={"none"}
+                    DisplayII={"none"}
+                    DisplayIII={"none"}
+                    HeadTextI={"Experience the transformative power of our personalized financial services, designed to enhance your life."}
+                    UtilityI={
+                        <div className='Utility-Box'>
+                            <img src={BulletOne} alt='li-icon'></img>
+                            <div>
+                                <h6>Car Finance </h6>
+                                <p>Explore Your Finance Options Online and Chat to a Broker to Arrange a Great Deal</p>
+                            </div>
+                        </div>
+                    }
+                    UtilityII={
+                        <div className='Utility-Box'>
+                            <img src={BulletTwo} alt='li-icon'></img>
+                            <div>
+                                <h6>Asset Finance</h6>
+                                <p>Get financing for the purchase of household appliances, alternative power solutions, etc.</p>
+                            </div>
+                        </div>
+
+                    }
+                    UtilityV={
+                        <div className='Utility-Box'>
+                            <img src={BulletThree} alt='li-icon'></img>
+                            <div>
+                                <h6>Commercial Loan</h6>
+                                <p>We can provide lending solutions to finance business expansions and acquisitions,</p>
+                            </div>
+                        </div>
+                    }
+                />
             </div>
             <div className='Contact-Us'>
                 <ImageTextBox src={ContactUs}

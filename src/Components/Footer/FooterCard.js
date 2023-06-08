@@ -1,10 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import LinkedIn from './Assets/LinkedInIcon.svg';
-import Messenger from './Assets/MessengerIcon.svg';
-import Twitter from './Assets/TwitterIcon.svg';
-import Instagram from './Assets/UnknownIcon.svg';
+import Facebook from './Assets/FacebookIcon.svg';
+import Tiktok from './Assets/TiktokIcon.svg';
+import Instagram from './Assets/InstagramIcon.svg';
 
 const FooterCardWrapper = styled.section`
     a{
@@ -120,10 +118,9 @@ const FooterCard = ({ HeadText, TextOne, TextTwo, TextThree, TextFour, display, 
             <a href={urlThree} target={targetThree} rel="noopener noreferrer external" ><p>{TextThree}</p></a>
             <a href={urlFour} target={targetFour} rel="noopener noreferrer external" ><p>{TextFour}</p></a>
             <div className='SM-Icons' style={{ display: display }}>
-                <Link><img src={LinkedIn} alt='LinkedIn Icon'></img></Link>
-                <Link><img src={Messenger} alt='Messenger Icon'></img></Link>
-                <Link><img src={Twitter} alt='Twitter Icon'></img></Link>
-                <Link><img src={Instagram} alt='Instagram Icon'></img></Link>
+                <a href="https://www.facebook.com/Brpfinance/" rel='noopener noreferrer external' target='_blank' ><img src={Facebook} alt='Facebook Icon'></img></a>
+                <a href='https://www.instagram.com/brp_finance/' rel='noopener noreferrer external' target='_blank'><img src={Instagram} alt='Instagram Icon'></img></a>
+                <a href='https://www.brpfinance.com.au/' rel='noopener noreferrer external' target='_blank' ><img src={Tiktok} alt='Tiktok Icon'></img></a>
             </div>
         </FooterCardWrapper>
     )
