@@ -65,7 +65,7 @@ const ContactButton = ({ ButtonText, Background, Type, Width, Display, BorderRad
   const navigate = useNavigate();
 
   return (
-    <HashLink style={{textDecoration: 'none'}} to={to} smooth>
+    <HashLink style={{ textDecoration: 'none' }} to={to} smooth>
       <ContactButtonWrapper type={Type} style={{ background: Background, width: Width, borderRadius: BorderRadius, boxShadow: BoxShadow, padding: Padding }} onClick={() => {
         navigate(url)
       }} >

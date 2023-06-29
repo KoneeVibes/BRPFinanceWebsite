@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Footer from '../../Components/Footer/Footer';
 import Header from '../../Components/Header/Header';
 import NavBar from '../../Components/NavBar/NavBar';
@@ -18,8 +18,26 @@ import Calendly from '../../Components/Calendly/Calendly';
 import ContactButton from '../../Components/DownloadButton/ContactButton';
 import Counter from '../../Components/Counter/Counter'
 import { handleButtonClick } from '../Home/Home';
+import Invest from "../About/Assets/investInProperties.svg";
 
 const About = () => {
+
+    const [isTablet, setIsTablet] = useState(false);
+
+    useEffect(() => {
+        const mediaQuery = window.matchMedia('(max-width: 1024px)');
+        const handleMediaQueryChange = (event) => {
+            setIsTablet(event.matches);
+        };
+
+        handleMediaQueryChange(mediaQuery);
+        mediaQuery.addEventListener('change', handleMediaQueryChange);
+
+        return () => {
+            mediaQuery.removeEventListener('change', handleMediaQueryChange);
+        };
+    })
+
     return (
         <div id='About'>
             <NavBar />
@@ -48,6 +66,31 @@ const About = () => {
                     HeadTextI={'When should you see us and what can you expect?'}
                     BodyI={"You can see us at any stage in your financial journey. You might still be saving for your first home, wishing to use the equity in your current one, or wondering if you're still getting the right deal with your existing lender. You can make an obligation-free appointment with us at a time and place that suits you."}
                     BodyII={"We will ask about your financial circumstances and objectives to find out what's important to you in a home loan. For example, flexibility might be important because you plan to start a family or you may want ready access to equity for a rental property or renovations. Whatever your plans, we will research the market and recommend the right home loan to suit your needs. We always look for the right loan for you, not the lender."} />
+            </div>
+            <div className='Invest-Section'>
+                <ImageTextBox
+                    src={Invest}
+                    HeadTextI={"Invest in Properties & Lending"}
+                    BodyI={"We specialize in property investments and the leading structure for investment borrowing - Get in contact today to see how we help you."}
+                    DisplayCardII={"none"}
+                    DisplayCardIII={"none"}
+                    DisplayI={"none"}
+                    UtilityI={
+                        <ContactButton
+                            Display={'none'}
+                            ButtonText={'work with us'}
+                            Background={'#007CB4'}
+                            BorderRadius={'7px'}
+                            BoxShadow={'0px 4px 3px 0px rgba(0, 0, 0, 0.25)'}
+                            Padding={(window.screen.availWidth >= 150) ? `0 var(--card-padding)` : '0'}
+                            to={'#Calendly'}
+                        />
+                    }
+                    gap={`var(--flex-gap)`}
+                    flexDirection={isTablet ? "column" : "row"}
+                    widthIB={'50%'}
+                    widthTCB={'50%'}
+                />
             </div>
             <div className='Profile-Section'>
                 <TextCard Icon={ImageI}
@@ -80,7 +123,8 @@ const About = () => {
                 <TextCard Icon={ImageIV}
                     HeadText={'Rene Gicale'}
                     Body={'Admin Team'}
-                    ContactInfoI={"03 9123 4584"}
+                    ContactInfoI={"Rene@brpfinance.com.au"}
+                    ContactInfoII={"03 9123 4584"}
                     Display={'flex'}
                     FlexDirection={'column'}
                     Gap={`var(--flex-gap)`}
@@ -97,14 +141,17 @@ const About = () => {
                     gap={`var(--flex-gap)`}
                     HeadTextI={'Our customers love what we do'}
                     BodyI={"Over 50,000 people use BRP finance to buy homes, get loans and many more."}
-                    UtilityI={<ContactButton Display={'none'}
-                        ButtonText={'work with us'}
-                        Background={'#FFF5F5'}
-                        BorderRadius={'7px'}
-                        BoxShadow={'0px 4px 3px rgba(0, 0, 0, 0.25)'}
-                        Padding={(window.screen.availWidth >= 150) ? `0 var(--card-padding)` : '0'}
-                        to={'#Calendly'}
-                    />}
+                    UtilityI={
+                        <ContactButton
+                            Display={'none'}
+                            ButtonText={'work with us'}
+                            Background={'#007CB4'}
+                            BorderRadius={'7px'}
+                            BoxShadow={'0px 4px 3px 0px rgba(0, 0, 0, 0.25)'}
+                            Padding={(window.screen.availWidth >= 150) ? `0 var(--card-padding)` : '0'}
+                            to={'#Calendly'}
+                        />
+                    }
                 />
             </div>
             <div className='Calendly-Box'>

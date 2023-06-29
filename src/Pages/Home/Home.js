@@ -117,7 +117,7 @@ const Home = () => {
             <div className='Contact-Us'>
                 <ImageTextBox src={ContactUs}
                     HeadTextI={'Speak to a Mortgage Broker '}
-                    BodyI={'when it comes to buying your first home, it’s a great idea to speak to a mortgage broker first! Heath Brunn is the Managing Director and Founder of BRP finance . He won the VIC/TAS best broker insurance sales  2021/2022 at the AFG Broker Awards. '}
+                    BodyI={'When it comes to starting your property journey, it’s a great idea to speak to a mortgage broker first! Heath Brunn is the Managing Director and Founder of BRP Finance. He won the VIC/TAS best broker insurance sales 2021/2022 at the AFG Broker Awards.'}
                     flexDirection={(window.screen.availWidth >= 1440) ? 'row-reverse' : 'column-reverse'}
                     widthIB={'50%'}
                     widthTCB={'50%'}

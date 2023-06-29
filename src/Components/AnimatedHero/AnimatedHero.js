@@ -191,11 +191,12 @@ const AnimatedHero = () => {
                 </div>
 
                 <div className='Middle'>
-                    <h2>Trusted by more
-                        than <span>50K users</span></h2>
-                    <p>We make sure you get the right home
-                        loan for your circumstances and will
-                        manage the process from start to finish.
+                    <h2>
+                        Trusted by more
+                        than <span>50K users</span>
+                    </h2>
+                    <p>
+                        BRP Finance has helped thousands of clients with their finance selections
                     </p>
                 </div>
 
