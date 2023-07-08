@@ -87,17 +87,17 @@ const Footer = () => {
           targetThree={'_blank'}
           display={'none'} />
         <FooterCard HeadText={'TOOLS'}
-          TextOne={'Proposal Template'}
-          TextTwo={'Invoice Template'}
-          TextThree={'Tutorial'}
-          TextFour={'Calculator'}
-          urlFour={'https://www.brpfinance.com.au/calculators/'}
+          TextOne={'Download mobile app'}
+          TextTwo={'Tutorial'}
+          TextThree={'Calculator'}
+          urlOne={'https://1af3.app.link/?brokerId=1-36YM931'}
+          urlThree={'https://www.brpfinance.com.au/calculators/'}
           targetFour={'_blank'}
           display={'none'} />
         <Newsletter />
       </div>
       <div className='Lower-Section'>
-        <p>Copyright @ <a href='https://lemonhq.xyz/' rel='noopener noreferrer external' target='_blank'>Lemon Designs 2023.</a> All Rights Reserved.</p>
+        <p>Copyright @ <a href='mailto:lemondesigns86@gmail.com' rel='noopener noreferrer external' target='_blank'>Lemon Designs 2023.</a> All Rights Reserved.</p>
       </div>
     </FooterWrapper>
   )

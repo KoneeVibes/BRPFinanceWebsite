@@ -4,7 +4,7 @@ import ArrowRight from './Assets/ArrowRightII.svg'
 import { useNavigate } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 
-const ContactButtonWrapper = styled.button`
+export const ContactButtonWrapper = styled.button`
     display: flex;
     align-items: center;
     gap: 2em;

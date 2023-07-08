@@ -12,10 +12,6 @@ html {
     --nav-height: 4em;
 }
 
-* {
-    /* outline: solid 1px red; */
-}
-
 @media screen and (min-width: 1727px) {
     html {
         --nav-height: 7em;
